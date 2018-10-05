@@ -54,3 +54,5 @@ Route.group(() => {
 })
 .prefix('api/v1');
 
+// https://www.npmjs.com/package/adonis-nextjs
+
