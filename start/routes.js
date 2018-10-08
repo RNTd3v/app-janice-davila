@@ -14,7 +14,9 @@
 */
 
 /** @type {import('@adonisjs/framework/src/Route/Manager'} */
-const Route = use('Route')
+const Route = use('Route');
+const Next = use('Adonis/Addons/Next');
+const handler = Next.getRequestHandler();
 
 
 Route.group(() => {
@@ -25,7 +27,7 @@ Route.group(() => {
 
   // Category routes
   Route.get('/category', 'CategoryController.index');
-  Route.get('/category/:id', 'CategoryController.show');
+  Route.get('/category/film/:id', 'CategoryController.show');
   Route.get('/category/films', 'CategoryController.allWithFilms');
   Route.get('/category/films/videos', 'CategoryController.allWithFilmsAndVideos');
   Route.get('/category/:id/films', 'CategoryController.allFilmsByCategoryId');
@@ -54,6 +56,23 @@ Route.group(() => {
   Route.post('upload', 'UploadController.index');
 })
 .prefix('api/v1');
+
+//* Next Routes
+Route.get('/detail/:id', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/detail', {
+		id: params.id
+	})
+);
+
+Route.get(
+	'*',
+	({ request, response }) =>
+		new Promise((resolve, reject) => {
+			handler(request.request, response.response, promise => {
+				promise.then(resolve).catch(reject);
+			});
+		})
+);
 
 // https://www.npmjs.com/package/adonis-nextjs
 
