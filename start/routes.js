@@ -36,7 +36,8 @@ Route.group(() => {
   Route.resource('videos', 'VideoController').apiOnly().middleware(['auth']);
 
   // Contact routes
-  Route.resource('contact', 'ContactController');
+  Route.resource('contacts', 'ContactController');
+  Route.post('/contact', 'ContactController.store');
 
   // Bio routes
   Route.resource('bio', 'BioController').apiOnly().middleware(['auth']);

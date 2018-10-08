@@ -2,7 +2,7 @@
 
 /** @type {import('@adonisjs/framework/src/Env')} */
 const Env = use('Env')
-
+// console.log(Env.get('APP_KEY'));
 module.exports = {
 
   /*
@@ -16,7 +16,7 @@ module.exports = {
   |
   */
 
-  name: Env.get('APP_NAME', 'AdonisJs'),
+  name: Env.get('APP_NAME', 'Janice'),
 
   /*
   |--------------------------------------------------------------------------
@@ -27,7 +27,8 @@ module.exports = {
   | to encrypted cookies, sessions and other sensitive data.
   |
   */
-  appKey: Env.getOrFail('APP_KEY'),
+  // appKey: Env.get('APP_KEY', 'tgJjusoxZCfkK8M6YOZTRzSO0JMVLaFt'),
+  appKey: 'tgJjusoxZCfkK8M6YOZTRzSO0JMVLaFt',
 
   http: {
     /*

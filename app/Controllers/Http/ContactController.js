@@ -21,16 +21,15 @@ class ContactController {
    * POST contacts
    */
   async store ({ request, response }) {
-
     const data = request.all()
-    await Contact.create(data)
+    await Contact.create(data.contact)
 
     const email = `
       <h2> Novo Contato</h2>
-      <p><strong>Nome:</strong> ${data.name}</p>
-      <p><strong>Telefone:</strong> ${data.phone}</p>
-      <p><strong>E-mail:</strong> ${data.email}</p>
-      <p><strong>Mensagem:</strong> ${data.message}</p>
+      <p><strong>Nome:</strong> ${data.contact.name}</p>
+      <p><strong>Telefone:</strong> ${data.contact.phone}</p>
+      <p><strong>E-mail:</strong> ${data.contact.email}</p>
+      <p><strong>Mensagem:</strong> ${data.contact.message}</p>
     `
 
     await Mail.raw(email, (message) => {
