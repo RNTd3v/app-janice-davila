@@ -1,0 +1,36 @@
+{
+  "name": "janice-front",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://Rntdesign12@bitbucket.org/Rntdesign12/janice-front.git",
+  "author": "Renato Andrade <renato.andrade@opus-software.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "@u-wave/react-vimeo": "^0.5.0",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.18.0",
+    "next": "^7.0.1",
+    "node-sass": "^4.9.3",
+    "react": "^16.5.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.5.2",
+    "react-ga": "^2.5.3",
+    "react-spinners": "^0.4.5",
+    "react-text-mask": "^5.4.3",
+    "react-transition-group": "^2.5.0",
+    "styled-components": "^3.4.9"
+  },
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  },
+  "devDependencies": {
+    "babel-plugin-root-import": "^6.1.0",
+    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-transform-define": "^1.3.0"
+  }
+}

@@ -1,0 +1,42 @@
+.table {
+    padding: 2rem;
+
+    > .row {
+        display: flex;
+        border-bottom: 1px solid #2f2f2f;
+
+        &.-head {
+            font-family: $bold;
+            color: $green;
+            border-color: $green;
+        }
+
+        > .col {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+
+            &.-img {
+                width: 100px;
+                justify-content: center;
+            }
+
+            &.-flex {
+                flex: 1;
+            }
+
+            &.-act {
+                width: 100px;
+                justify-content: center;
+            }
+
+            > .picture {
+                width: 50px;
+            }
+
+            > .icon {
+                padding: 0 .5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.admin {
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
+    > .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+        > .logo {
+            margin: 30px auto;
+            text-align: center;
+        }
+    }
+
+    > .main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-height: inherit;
+        
+        > .title {
+            margin-top: 50px;
+            text-align: center;
+
+            > .name {
+                color: $green;
+                font-family: $bold;
+            }
+        }
+
+        > .list {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > .info {
+                position: absolute;
+                margin-top: -80px;
+                color: $green;
+            }
+
+            > .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 5rem;
+                cursor: pointer;
+
+                > .title {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 2px;
+                        background-color: $green;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        margin-left: -10px; 
+                        transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    }
+                }
+
+                > .icon {
+                    font-size: 10rem;
+                    margin-bottom: 2rem;
+                    transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                }
+
+                &:hover {
+                    > .title {
+                        &:after {
+                            width: 20px;
+                        }
+                    }
+                    > .icon {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}

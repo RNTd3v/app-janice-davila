@@ -1,0 +1,43 @@
+.language {
+    padding-left: 2rem;
+    > .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > .item {
+            padding: 0 .2rem;
+            list-style: none;
+            &:first-child {
+                &:after {
+                    content: "/";
+                    margin: 0 8px;
+                    margin-right: 2px;
+                    cursor: default;
+                    font-family: 'Panton-ExtraLight';
+                    opacity: .5;
+                }
+            }
+            > .link {
+                text-decoration: none;
+                color: $grey;
+                font-family: 'Panton-Bold';
+                font-size: .8rem;
+                &.-active {
+                    color: $green;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        width: 15px;
+                        height: 2px;
+                        background-color: $green;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 50%;
+                        margin-left: -7.5px; 
+                    }
+                }
+            }
+        }
+    }
+}

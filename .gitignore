@@ -1,8 +1,11 @@
 # Node modules
 node_modules
+
 package-lock.json
-next/node_modules
-next/yarn.lock
+public/node_modules
+public/yarn.lock
+public/yarn-error.log
+dist
 
 # Adonis directory for storing tmp files
 tmp

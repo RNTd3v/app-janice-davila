@@ -1,0 +1,463 @@
+@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
+@font-face {
+  font-family: 'Panton-Bold';
+  src: url("/static/fonts/Panton/Panton-Bold.eot");
+  src: url("/static/fonts/Panton/Panton-Bold.woff2") format("woff2"), url("/static/fonts/Panton/Panton-Bold.woff") format("woff"), url("/static/fonts/Panton/Panton-Bold.ttf") format("truetype"), url("/static/fonts/Panton/Panton-Bold.svg#Panton-Bold") format("svg"), url("/static/fonts/Panton/Panton-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Panton-Regular';
+  src: url("/static/fonts/Panton/Panton-Regular.eot");
+  src: url("/static/fonts/Panton/Panton-Regular.woff2") format("woff2"), url("/static/fonts/Panton/Panton-Regular.woff") format("woff"), url("/static/fonts/Panton/Panton-Regular.ttf") format("truetype"), url("/static/fonts/Panton/Panton-Regular.svg#Panton-Regular") format("svg"), url("/static/fonts/Panton/Panton-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Panton-ExtraLight';
+  src: url("/static/fonts/Panton/Panton-ExtraLight.eot");
+  src: url("/static/fonts/Panton/Panton-ExtraLight.woff2") format("woff2"), url("/static/fonts/Panton/Panton-ExtraLight.woff") format("woff"), url("/static/fonts/Panton/Panton-ExtraLight.ttf") format("truetype"), url("/static/fonts/Panton/Panton-ExtraLight.svg#Panton-ExtraLight") format("svg"), url("/static/fonts/Panton/Panton-ExtraLight.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  min-height: 97vh; }
+  .admin > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem; }
+    .admin > .header > .logo {
+      margin: 30px auto;
+      text-align: center; }
+  .admin > .main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: inherit; }
+    .admin > .main > .title {
+      margin-top: 50px;
+      text-align: center; }
+      .admin > .main > .title > .name {
+        color: #3d8f8f;
+        font-family: "Panton-Bold"; }
+    .admin > .main > .list {
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .admin > .main > .list > .info {
+        position: absolute;
+        margin-top: -80px;
+        color: #3d8f8f; }
+      .admin > .main > .list > .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5rem;
+        cursor: pointer; }
+        .admin > .main > .list > .item > .title {
+          position: relative; }
+          .admin > .main > .list > .item > .title:after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: #3d8f8f;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            margin-left: -10px;
+            transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+        .admin > .main > .list > .item > .icon {
+          font-size: 10rem;
+          margin-bottom: 2rem;
+          transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+        .admin > .main > .list > .item:hover > .title:after {
+          width: 20px; }
+        .admin > .main > .list > .item:hover > .icon {
+          color: #3d8f8f; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: black; }
+  header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem; }
+
+main {
+  padding: 5rem 0;
+  min-height: 90vh; }
+
+.films {
+  display: flex;
+  padding-top: 10rem; }
+  .films .film {
+    padding: 1rem; }
+    .films .film > .title {
+      font-size: 1rem;
+      margin-bottom: 2rem; }
+    .films .film .item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: .5rem; }
+      .films .film .item > .picture {
+        width: 100%;
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+      .films .film .item > .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: -100%;
+        left: 0;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+        .films .film .item > .content > .title {
+          color: #bfbfbf;
+          font-size: 2rem; }
+        .films .film .item > .content > .link {
+          color: #3d8f8f;
+          border: 1px solid #3d8f8f;
+          padding: .5rem;
+          margin-top: 1rem;
+          border-radius: 2px;
+          transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+          .films .film .item > .content > .link:hover {
+            background-color: #3d8f8f;
+            color: white; }
+      .films .film .item:hover > .picture {
+        opacity: .5;
+        transform: rotate(-1deg) scale(1.5); }
+      .films .film .item:hover > .content {
+        bottom: 0; }
+
+.film-detail {
+  display: flex;
+  padding-top: 10rem; }
+  .film-detail > .videos {
+    flex: 1;
+    padding-right: 3rem; }
+    .film-detail > .videos > .player iframe {
+      width: 100%; }
+  .film-detail > .content {
+    width: 350px; }
+    .film-detail > .content > .title {
+      margin: 1rem 0 2rem;
+      font-size: 2rem;
+      color: #3d8f8f; }
+
+.contact {
+  display: flex;
+  padding-top: 10rem;
+  align-items: center;
+  justify-content: space-around;
+  min-height: calc(100vh - 84px); }
+  .contact > .info > .title {
+    color: #3d8f8f;
+    font-size: 3rem;
+    margin-bottom: 2rem; }
+  .contact > .info > .item {
+    margin: 1rem 0; }
+    .contact > .info > .item > .icon {
+      margin-right: 10px;
+      color: #3d8f8f; }
+    .contact > .info > .item > .text {
+      color: white; }
+  .contact > .form {
+    width: 400px; }
+
+.login {
+  width: 100%;
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .login > .content > .logo {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -85px; }
+  .login > .content > .title {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center; }
+  .login > .content > .form > .link {
+    background: none;
+    border: none;
+    color: #bfbfbf;
+    margin: 20px 0;
+    text-align: right;
+    width: 100%;
+    cursor: pointer; }
+    .login > .content > .form > .link:hover {
+      color: #3d8f8f; }
+
+.table {
+  padding: 2rem; }
+  .table > .row {
+    display: flex;
+    border-bottom: 1px solid #2f2f2f; }
+    .table > .row.-head {
+      font-family: "Panton-Bold";
+      color: #3d8f8f;
+      border-color: #3d8f8f; }
+    .table > .row > .col {
+      padding: 1rem;
+      display: flex;
+      align-items: center; }
+      .table > .row > .col.-img {
+        width: 100px;
+        justify-content: center; }
+      .table > .row > .col.-flex {
+        flex: 1; }
+      .table > .row > .col.-act {
+        width: 100px;
+        justify-content: center; }
+      .table > .row > .col > .picture {
+        width: 50px; }
+      .table > .row > .col > .icon {
+        padding: 0 .5rem; }
+
+.footer {
+  width: 100%;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-top: 1px solid #3d8f8f; }
+  .footer > .text {
+    text-transform: uppercase;
+    font-size: .8rem; }
+    .footer > .text > .author {
+      color: #3d8f8f;
+      text-decoration: none;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+      font-family: 'Panton-Bold'; }
+      .footer > .text > .author:hover {
+        color: white; }
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer; }
+  .action > .icon {
+    transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  .action > .text {
+    display: block;
+    margin-top: 5px; }
+    .action > .text:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: #3d8f8f;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -10px;
+      transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  .action:hover > .icon {
+    color: #3d8f8f; }
+  .action:hover > .text:after {
+    width: 20px; }
+
+.button {
+  width: 100%;
+  background: none;
+  padding: 1rem;
+  color: #3d8f8f;
+  border: 1px solid #3d8f8f;
+  transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  cursor: pointer; }
+  .button:hover {
+    background-color: #3d8f8f;
+    color: white; }
+  .button.-center {
+    width: 200px;
+    margin-top: 50px; }
+  .button.-disabled {
+    opacity: .5;
+    cursor: default; }
+    .button.-disabled:hover {
+      background: none;
+      color: #3d8f8f;
+      border: 1px solid #3d8f8f; }
+
+.form .input,
+.form .textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  margin-bottom: .2rem;
+  color: #3d8f8f; }
+
+.form .label {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin: 15px 0 5px;
+  display: block; }
+
+.form.-grid {
+  padding: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+  .form.-grid > .col {
+    width: 50%;
+    padding: 0 2rem; }
+    .form.-grid > .col small {
+      display: block;
+      margin-bottom: 2rem; }
+  .form.-grid > .picture {
+    width: 100%;
+    padding: 2rem; }
+    .form.-grid > .picture > .required {
+      text-align: right;
+      display: block;
+      margin-top: 20px; }
+    .form.-grid > .picture img {
+      width: 200px;
+      margin-top: 2rem; }
+
+.formErrors {
+  margin: 0 auto;
+  color: red; }
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column; }
+  .logo a span {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .logo a small {
+    font-size: .8rem;
+    letter-spacing: .11rem; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .nav .menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .nav .menu ul li {
+      list-style: none;
+      padding: 0 1rem; }
+      .nav .menu ul li a {
+        color: white;
+        text-decoration: none;
+        position: relative; }
+        .nav .menu ul li a:after {
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: #3d8f8f;
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          margin-left: -10px;
+          transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+        .nav .menu ul li a:hover:after {
+          width: 20px; }
+        .nav .menu ul li a.active {
+          font-family: 'Panton-Bold';
+          color: #3d8f8f; }
+          .nav .menu ul li a.active:after {
+            width: 20px; }
+
+.language {
+  padding-left: 2rem; }
+  .language > .container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .language > .container > .item {
+      padding: 0 .2rem;
+      list-style: none; }
+      .language > .container > .item:first-child:after {
+        content: "/";
+        margin: 0 8px;
+        margin-right: 2px;
+        cursor: default;
+        font-family: 'Panton-ExtraLight';
+        opacity: .5; }
+      .language > .container > .item > .link {
+        text-decoration: none;
+        color: #bfbfbf;
+        font-family: 'Panton-Bold';
+        font-size: .8rem; }
+        .language > .container > .item > .link.-active {
+          color: #3d8f8f;
+          position: relative; }
+          .language > .container > .item > .link.-active:after {
+            content: '';
+            width: 15px;
+            height: 2px;
+            background-color: #3d8f8f;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -7.5px; }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+  .loading > small {
+    position: absolute;
+    top: -25px;
+    text-align: center;
+    width: 100px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px; }
+
+.socialmedia {
+  padding: 0 1rem;
+  color: white; }
+
+html, body {
+  background-color: black;
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Panton-ExtraLight'; }
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0; }
+
+strong {
+  font-family: 'Panton-Bold'; }
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

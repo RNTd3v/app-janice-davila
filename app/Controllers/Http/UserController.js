@@ -17,9 +17,9 @@ class UserController {
 
     async authenticate({ request, auth }) {
         const { email, password } = request.all();
-        console.log(email, password);
         const token = await auth.attempt(email, password);
-        return token;
+        const user = token ? await User.findBy('email', email) : null;
+        return { token, idUser: user.id, username: user.username };
     }
 }
 

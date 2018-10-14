@@ -1,0 +1,24 @@
+.film-detail {
+    display: flex;
+    padding-top: 10rem;
+
+    > .videos {
+        flex: 1;
+        padding-right: 3rem;
+        > .player {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+
+    > .content {
+        width: 350px;
+
+        > .title {
+            margin: 1rem 0 2rem;
+            font-size: 2rem;
+            color:$green;
+        }
+    }
+}

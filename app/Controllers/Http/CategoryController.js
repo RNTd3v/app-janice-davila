@@ -35,7 +35,10 @@ class CategoryController {
         const category = await Category.find(params.id);
         const data = await category.films().fetch();
         
-        return data;
+        return {
+            category: category.name,
+            films: data
+        };
     }
 }
 

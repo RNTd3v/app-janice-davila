@@ -9,9 +9,11 @@ class UploadController {
             types: ['image'],
             size: '2mb'
         });
+
+        const date = new Date().getTime();
         
-        await file.move(Helpers.publicPath('uploads'), {
-            name: `${category}-${title}-${new Date().getTime()}.${file.subtype}`,
+        await file.move(Helpers.publicPath('static/uploads'), {
+            name: `${category}-${title}-${date}.${file.subtype}`,
             overwrite: true
         })
 
@@ -21,7 +23,7 @@ class UploadController {
         
         response.status(200).json({
             message: `Imagem salva com sucesso!`,
-            data: `./uploads/${category}-${title}-${new Date().getTime()}.${file.subtype}`
+            data: `/static/uploads/${category}-${title}-${date}.${file.subtype}`
         });
     }
 }

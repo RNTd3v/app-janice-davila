@@ -64,6 +64,25 @@ Route.get('/detail/:id', ({ request, response, params }) =>
 	})
 );
 
+Route.get('/admin/:id/films', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/admin/films', {
+		id: params.id
+	})
+);
+
+Route.get('/admin/:id/:category/film', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/admin/film', {
+    id: params.id,
+    category: params.category
+	})
+);
+Route.get('/admin/:id/:category/film/:idFilm', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/admin/film', {
+    id: params.id,
+    idFilm: params.idFilm
+	})
+);
+
 Route.get(
 	'*',
 	({ request, response }) =>

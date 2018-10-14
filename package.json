@@ -5,9 +5,9 @@
   "description": "Adonis and Next/React",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
-		"build": "next build ./next",
-		"export": "next export ./next",
+    "dev": "NEXT_FOLDER=public node server.js",
+		"build": "next build ./public",
+		"export": "next export ./public",
 		"start": "NODE_ENV=production node server.js"
   },
   "keywords": [
