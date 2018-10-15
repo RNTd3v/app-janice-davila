@@ -20,9 +20,19 @@ class AdminFilms extends React.Component {
     }
 
     componentDidMount() {
+        this.getFilms();
+    }
+
+    getFilms() {
         categories.getFilmsByCategoryId(Router.query.id).then(res =>  {
             this.setState({films: res.films});
             this.setState({category: res.category});
+        });
+    }
+
+    deleteFilm(idFilm) {
+        categories.deleteFilm(idFilm).then(res =>  {
+            this.getFilms();
         });
     }
 
@@ -69,7 +79,7 @@ class AdminFilms extends React.Component {
                                             <i className="far fa-edit icon"></i>
                                             <small className="text">Edit</small>
                                         </div>
-                                        <div className="icon -delete  action">
+                                        <div className="icon -delete  action" onClick={() => this.deleteFilm(film.id)}>
                                             <i className="fas fa-eraser icon"></i>
                                             <small className="text">Delete</small>
                                         </div>

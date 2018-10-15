@@ -115,6 +115,7 @@ main {
       margin-bottom: .5rem; }
       .films .film .item > .picture {
         width: 100%;
+        max-width: 500px;
         transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1); }
       .films .film .item > .content {
         position: absolute;

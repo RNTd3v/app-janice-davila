@@ -33,7 +33,23 @@ export default class CategoriesService {
             body: JSON.stringify(film)
         }).then(res => Promise.resolve(res))
 
+    }
+
+    updateFilm(film, idFilm) {
         
+      return this.fetch(`${this.domain}/films/${idFilm}`, {
+          method: 'PUT',
+          body: JSON.stringify(film)
+      }).then(res => Promise.resolve(res))
+
+    }
+
+    deleteFilm(idFilm) {
+        
+      return this.fetch(`${this.domain}/films/${idFilm}`, {
+          method: 'DELETE',
+      }).then(res => Promise.resolve(res))
+
     }
 
     uploadPicture(data) {

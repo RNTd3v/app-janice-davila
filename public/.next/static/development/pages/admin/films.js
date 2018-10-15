@@ -21113,6 +21113,11 @@ function (_React$Component) {
   _createClass(AdminFilms, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      this.getFilms();
+    }
+  }, {
+    key: "getFilms",
+    value: function getFilms() {
       var _this2 = this;
 
       categories.getFilmsByCategoryId(next_router__WEBPACK_IMPORTED_MODULE_1___default.a.query.id).then(function (res) {
@@ -21126,8 +21131,19 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "deleteFilm",
+    value: function deleteFilm(idFilm) {
+      var _this3 = this;
+
+      categories.deleteFilm(idFilm).then(function (res) {
+        _this3.getFilms();
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this4 = this;
+
       var _this$state = this.state,
           films = _this$state.films,
           category = _this$state.category,
@@ -21136,14 +21152,14 @@ function (_React$Component) {
         className: "admin",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -21153,27 +21169,27 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-arrow-left icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 45
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 46
         },
         __self: this
       }, "Back")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_components_logo__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 48
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -21183,70 +21199,70 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 49
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-plus-square icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 50
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
         className: "text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 51
         },
         __self: this
       }, "Add"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
         className: "main",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 55
         },
         __self: this
       }, category), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "table",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 56
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row -head",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col -img",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 58
         },
         __self: this
       }, "Image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col -flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 61
         },
         __self: this
       }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col -act",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 64
         },
         __self: this
       }, "Action")), films.map(function (film) {
@@ -21255,14 +21271,14 @@ function (_React$Component) {
           key: film.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60
+            lineNumber: 70
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "col -img",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 71
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -21270,21 +21286,21 @@ function (_React$Component) {
           className: "picture",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 72
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "col -flex",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 74
           },
           __self: this
         }, film.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "col -act",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 77
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -21294,49 +21310,52 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68
+            lineNumber: 78
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "far fa-edit icon",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 79
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
           className: "text",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 80
           },
           __self: this
         }, "Edit")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "icon -delete  action",
+          onClick: function onClick() {
+            return _this4.deleteFilm(film.id);
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 82
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-eraser icon",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73
+            lineNumber: 83
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
           className: "text",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
+            lineNumber: 84
           },
           __self: this
         }, "Delete"))));
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_components_footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 92
         },
         __self: this
       }));
@@ -21851,6 +21870,25 @@ function () {
       });
     }
   }, {
+    key: "updateFilm",
+    value: function updateFilm(film, idFilm) {
+      return this.fetch("".concat(this.domain, "/films/").concat(idFilm), {
+        method: 'PUT',
+        body: JSON.stringify(film)
+      }).then(function (res) {
+        return Promise.resolve(res);
+      });
+    }
+  }, {
+    key: "deleteFilm",
+    value: function deleteFilm(idFilm) {
+      return this.fetch("".concat(this.domain, "/films/").concat(idFilm), {
+        method: 'DELETE'
+      }).then(function (res) {
+        return Promise.resolve(res);
+      });
+    }
+  }, {
     key: "uploadPicture",
     value: function uploadPicture(data) {
       var headers = {};
@@ -21916,7 +21954,7 @@ function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 8:
 /*!************************************!*\
   !*** multi ./pages/admin/films.js ***!
   \************************************/
@@ -21941,5 +21979,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]));;
+},[[8,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=films.js.map

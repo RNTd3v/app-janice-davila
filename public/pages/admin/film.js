@@ -15,6 +15,7 @@ class AdminFilm extends React.Component {
     constructor() {
         super();
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             category: Router.query.category,
             title: "",
@@ -24,11 +25,12 @@ class AdminFilm extends React.Component {
             picture: "",
             is_active: true,
             category_id: Router.query.id,
-            film: {},
             titleValid: false,
             titlePtValid: false,
             pictureValid: false,
             formErrors: {title: '', titulo: '', picture: ''},
+            update: false,
+            filmId: Router.query.idFilm
         }
     }
 
@@ -68,7 +70,8 @@ class AdminFilm extends React.Component {
                 is_active: res.is_active,
                 titleValid: true,
                 titlePtValid: true,
-                pictureValid: true
+                pictureValid: true,
+                update: true
             });
             this.setState({formValid: this.state.titleValid && this.state.titlePtValid && this.state.pictureValid});
         })
@@ -108,6 +111,41 @@ class AdminFilm extends React.Component {
 
     validateForm() {
         this.setState({formValid: this.state.titleValid && this.state.titlePtValid && this.state.pictureValid});
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const { 
+            title, 
+            title_pt, 
+            description, 
+            description_pt,
+            is_active,
+            picture,
+            category_id,
+            update,
+            filmId
+        } = this.state;
+
+        const data = {
+            title, 
+            title_pt, 
+            description, 
+            description_pt,
+            is_active,
+            picture,
+            category_id 
+        }
+
+        update 
+        ?
+            categories.updateFilm(data, filmId).then(res => {
+                console.log(res);
+            })
+        :
+            categories.saveFilm(data).then(res => {
+                console.log(res);
+            })
     }
 
     render () {
