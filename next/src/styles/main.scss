@@ -1,0 +1,48 @@
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+
+@import
+'./general/fonts',
+
+'./helpers/mixins',
+'./helpers/variables',
+
+'./layout/header',
+'./layout/main',
+'./layout/films',
+'./layout/detail',
+'./layout/contact',
+'./layout/footer',
+
+'./components/button',
+'./components/form',
+'./components/logo',
+'./components/menu',
+'./components/language',
+'./components/socialmedia';
+
+html, body {
+    background-color: black;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Panton-ExtraLight';
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-family: 'Panton-Bold';
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+// https://github.com/zeit/next-plugins/tree/master/packages/next-sass

@@ -1,0 +1,32 @@
+.contact {
+    display: flex;
+    padding-top: 10rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 84px);
+    > .info {
+        flex: 1;
+        > .title {
+            color: $green;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        > .item {
+            margin: 1rem 0;
+
+            > .icon {
+                margin-right: 10px;
+                color: $green;
+            }
+
+            > .text {
+                color: white;
+            }
+        }
+    }
+
+    > .form {
+        width: 400px;
+    }
+}

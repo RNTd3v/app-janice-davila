@@ -42,7 +42,7 @@ Route.group(() => {
   Route.post('/contact', 'ContactController.store');
 
   // Bio routes
-  Route.resource('bio', 'BioController').apiOnly().middleware(['auth']);
+  Route.resource('bios', 'BioController').apiOnly().middleware(['auth']);
   Route.get('/bio/:id', 'BioController.show');
 
   // About routes
@@ -60,6 +60,12 @@ Route.group(() => {
 //* Next Routes
 Route.get('/detail/:id', ({ request, response, params }) =>
 	Next.render(request.request, response.response, '/detail', {
+		id: params.id
+	})
+);
+
+Route.get('/detalhe/:id', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/detalhe', {
 		id: params.id
 	})
 );
