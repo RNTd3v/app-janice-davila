@@ -66,7 +66,7 @@ const Detail = ({ film }) => (
 
 Detail.getInitialProps = async ({ query }) => {
     const response = await axios.get(
-        `${process.env.API_URL}/film/8`
+        `${process.env.API_URL}/film/${query.id}`
     );
     return { film: response.data }
 }

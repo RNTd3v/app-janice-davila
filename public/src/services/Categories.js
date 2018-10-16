@@ -52,6 +52,19 @@ export default class CategoriesService {
 
     }
 
+    saveVideo(video) {
+      return this.fetch(`${this.domain}/videos`, {
+          method: 'POST',
+          body: JSON.stringify(video)
+      }).then(res => Promise.resolve(res))
+    }
+
+    deleteVideo(videoId) {
+      return this.fetch(`${this.domain}/videos/${videoId}`, {
+          method: 'DELETE'
+      }).then(res => Promise.resolve(res))
+    }
+
     uploadPicture(data) {
         const headers = {}
         

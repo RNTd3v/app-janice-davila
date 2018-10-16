@@ -30,6 +30,19 @@
                 display: block;
                 margin-bottom: 2rem;
             }
+
+            &.-four{
+                width: 25%;
+                padding: 0 .5rem;
+
+                small {
+                    margin-bottom: 1rem;
+                }
+
+                > .button {
+                    margin-top: 29px;
+                }
+            }
         }
 
         > .picture {
@@ -47,6 +60,11 @@
                 margin-top: 2rem;
             }
         }
+    }
+
+    &.-video {
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #2d2d2d;
     }
 }
 

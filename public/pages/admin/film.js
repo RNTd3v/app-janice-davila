@@ -124,7 +124,8 @@ class AdminFilm extends React.Component {
             picture,
             category_id,
             update,
-            filmId
+            filmId,
+            category
         } = this.state;
 
         const data = {
@@ -140,12 +141,16 @@ class AdminFilm extends React.Component {
         update 
         ?
             categories.updateFilm(data, filmId).then(res => {
-                console.log(res);
+                Router.push(`/admin/${res.data.id}/videos`)
             })
         :
             categories.saveFilm(data).then(res => {
-                console.log(res);
+                Router.push(`/admin/${res.data.id}/videos`)
             })
+    }
+
+    nextStep() {
+        // /admin/:id/:category/film/:idFilm/:film/videos
     }
 
     render () {

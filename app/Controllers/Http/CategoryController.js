@@ -8,7 +8,7 @@ class CategoryController {
         return await Category.all();
     }
 
-    async show () {
+    async show ({ params }) {
         return await Category.find(params.id);
     }
 

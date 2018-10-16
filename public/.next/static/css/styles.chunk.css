@@ -80,6 +80,21 @@
           width: 20px; }
         .admin > .main > .list > .item:hover > .icon {
           color: #3d8f8f; }
+    .admin > .main > .videos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2rem 5rem; }
+      .admin > .main > .videos > .list {
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .admin > .main > .videos > .list > .player {
+          padding: 1rem; }
 
 header {
   position: fixed;
@@ -292,7 +307,7 @@ main {
     color: white; }
   .button.-center {
     width: 200px;
-    margin-top: 50px; }
+    margin: 50px auto 0; }
   .button.-disabled {
     opacity: .5;
     cursor: default; }
@@ -300,6 +315,9 @@ main {
       background: none;
       color: #3d8f8f;
       border: 1px solid #3d8f8f; }
+  .button.-small {
+    width: auto;
+    padding: .5rem; }
 
 .form .input,
 .form .textarea {
@@ -328,6 +346,13 @@ main {
     .form.-grid > .col small {
       display: block;
       margin-bottom: 2rem; }
+    .form.-grid > .col.-four {
+      width: 25%;
+      padding: 0 .5rem; }
+      .form.-grid > .col.-four small {
+        margin-bottom: 1rem; }
+      .form.-grid > .col.-four > .button {
+        margin-top: 29px; }
   .form.-grid > .picture {
     width: 100%;
     padding: 2rem; }
@@ -338,6 +363,10 @@ main {
     .form.-grid > .picture img {
       width: 200px;
       margin-top: 2rem; }
+
+.form.-video {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #2d2d2d; }
 
 .formErrors {
   margin: 0 auto;
