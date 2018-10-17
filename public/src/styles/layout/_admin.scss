@@ -104,5 +104,13 @@
                 }
             }
         }
+
+        > .editor {
+            margin-top: 50px;
+            padding: 2rem;
+            > .title {
+                margin-bottom: 20px;
+            }
+        }
     }
 }

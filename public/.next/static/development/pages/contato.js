@@ -10883,7 +10883,9 @@ if (false) {} else {
 
 // This method of obtaining a reference to the global object needs to be
 // kept identical to the way it is obtained in runtime.js
-var g = (function() { return this })() || Function("return this")();
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
 
 // Use `getOwnPropertyNames` because not all browsers support calling
 // `hasOwnProperty` on the global `self` object in a worker. See #183.
@@ -11090,22 +11092,14 @@ if (hadRuntime) {
         return Promise.resolve(value).then(function(unwrapped) {
           // When a yielded Promise is resolved, its final value becomes
           // the .value of the Promise<{value,done}> result for the
-          // current iteration. If the Promise is rejected, however, the
-          // result for this iteration will be rejected with the same
-          // reason. Note that rejections of yielded Promises are not
-          // thrown back into the generator function, as is the case
-          // when an awaited Promise is rejected. This difference in
-          // behavior between yield and await is important, because it
-          // allows the consumer to decide what to do with the yielded
-          // rejection (swallow it and continue, manually .throw it back
-          // into the generator, abandon iteration, whatever). With
-          // await, by contrast, there is no opportunity to examine the
-          // rejection reason outside the generator function, so the
-          // only option is to throw it from the await expression, and
-          // let the generator function handle the exception.
+          // current iteration.
           result.value = unwrapped;
           resolve(result);
-        }, reject);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
       }
     }
 
@@ -11645,7 +11639,9 @@ if (hadRuntime) {
   // In sloppy mode, unbound `this` refers to the global object, fallback to
   // Function constructor if we're in global strict mode. That is sadly a form
   // of indirect eval which violates Content Security Policy.
-  (function() { return this })() || Function("return this")()
+  (function() {
+    return this || (typeof self === "object" && self);
+  })() || Function("return this")()
 );
 
 
@@ -16764,7 +16760,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_components_language__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/components/language */ "./src/components/language.js");
 /* harmony import */ var _src_components_footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/components/footer */ "./src/components/footer.js");
 
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/pages/contato.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/pages/contato.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -17145,7 +17141,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/footer.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/footer.js";
 
 
 var Footer = function Footer() {
@@ -17192,7 +17188,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/language.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/language.js";
 
 
 
@@ -17276,7 +17272,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/logo.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/logo.js";
 
 
 
@@ -17339,7 +17335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_ActiveLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ActiveLink */ "./src/utils/ActiveLink.js");
 /* harmony import */ var _social_media__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./social-media */ "./src/components/social-media.js");
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/menu.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/menu.js";
 
 
 
@@ -17408,7 +17404,7 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   }, language === 'pt' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_utils_ActiveLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/users",
+    href: "/bio-pt",
     activeClassName: "active",
     __source: {
       fileName: _jsxFileName,
@@ -17493,7 +17489,7 @@ var Menu = function Menu(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/social-media.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/social-media.js";
 
 
 var SocialMedia = function SocialMedia() {
@@ -17534,7 +17530,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dist_lib_utils__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dist_lib_utils__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-ga */ "./node_modules/react-ga/dist/react-ga.js");
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/hocs/withAnalytics.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/hocs/withAnalytics.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -17619,7 +17615,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/utils/ActiveLink.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/utils/ActiveLink.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -17659,7 +17655,7 @@ var ActiveLink = function ActiveLink(_ref) {
 
 /***/ }),
 
-/***/ 7:
+/***/ 15:
 /*!********************************!*\
   !*** multi ./pages/contato.js ***!
   \********************************/
@@ -17684,5 +17680,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]));;
+},[[15,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=contato.js.map

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_components_language__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/components/language */ "./src/components/language.js");
 /* harmony import */ var _src_components_footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/components/footer */ "./src/components/footer.js");
 
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/pages/contato.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/pages/contato.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -482,7 +482,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/footer.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/footer.js";
 
 
 var Footer = function Footer() {
@@ -529,7 +529,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/language.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/language.js";
 
 
 
@@ -613,7 +613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/logo.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/logo.js";
 
 
 
@@ -676,7 +676,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_ActiveLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ActiveLink */ "./src/utils/ActiveLink.js");
 /* harmony import */ var _social_media__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./social-media */ "./src/components/social-media.js");
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/menu.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/menu.js";
 
 
 
@@ -745,7 +745,7 @@ var Menu = function Menu(_ref) {
     },
     __self: this
   }, language === 'pt' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_utils_ActiveLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/users",
+    href: "/bio-pt",
     activeClassName: "active",
     __source: {
       fileName: _jsxFileName,
@@ -830,7 +830,7 @@ var Menu = function Menu(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/components/social-media.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/social-media.js";
 
 
 var SocialMedia = function SocialMedia() {
@@ -871,7 +871,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dist_lib_utils__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dist_lib_utils__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-ga */ "react-ga");
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/hocs/withAnalytics.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/hocs/withAnalytics.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -967,7 +967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/renatoandrade/Documents/RNT/projetos/janice/app-janice/public/src/utils/ActiveLink.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/utils/ActiveLink.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -1007,7 +1007,7 @@ var ActiveLink = function ActiveLink(_ref) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!********************************!*\
   !*** multi ./pages/contato.js ***!
   \********************************/

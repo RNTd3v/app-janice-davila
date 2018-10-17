@@ -7,6 +7,8 @@ import "../src/styles/main.scss";
 
 import withAnalytics from '../src/hocs/withAnalytics';
 
+import SanitizedHTML from 'react-sanitized-html';
+
 import Logo from '../src/components/logo';
 import Menu from '../src/components/menu';
 import Language from '../src/components/language';
@@ -30,7 +32,7 @@ const Bio = ({ bio }) => (
             <main className="contact container">
                 <section className="info">
                     <h2 className="title">{bio.title}</h2>
-                    <p>{bio.description}</p>
+                    <SanitizedHTML html={ bio.description } />
                 </section>
             </main>
             <Footer />
