@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -108,25 +108,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-addons-css-transition-group */ "react-addons-css-transition-group");
 /* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_src_styles_main_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/hocs/withAnalytics */ "./src/hocs/withAnalytics.js");
-/* harmony import */ var _src_components_logo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/components/logo */ "./src/components/logo.js");
-/* harmony import */ var _src_components_menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/components/menu */ "./src/components/menu.js");
-/* harmony import */ var _src_components_language__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/components/language */ "./src/components/language.js");
-/* harmony import */ var _src_components_footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/components/footer */ "./src/components/footer.js");
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-anchor-link-smooth-scroll */ "react-anchor-link-smooth-scroll");
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_src_styles_main_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/hocs/withAnalytics */ "./src/hocs/withAnalytics.js");
+/* harmony import */ var _src_components_logo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/components/logo */ "./src/components/logo.js");
+/* harmony import */ var _src_components_menu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/components/menu */ "./src/components/menu.js");
+/* harmony import */ var _src_components_language__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/components/language */ "./src/components/language.js");
+/* harmony import */ var _src_components_footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../src/components/footer */ "./src/components/footer.js");
 
 var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/pages/filmes.js";
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -146,75 +149,106 @@ var Filmes = function Filmes(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
   }, "Janice D'Avila - Filmes")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header", {
     className: "header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_logo__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_logo__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_menu__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    language: "pt",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_language__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    pt: "/filmes",
-    en: "/",
-    active: "pt",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_menu__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    language: "pt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
-    className: "films container",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_language__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    pt: "/filmes",
+    en: "/",
+    active: "pt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "show-mobile",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "220",
+    href: "#sectionNarrative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, "Narrativa"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "220",
+    href: "#sectionCommercials",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Comerciais"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "220",
+    href: "#sectionMusic",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "Video Clips"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
+    className: "films container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
@@ -222,14 +256,14 @@ var Filmes = function Filmes(_ref) {
     id: "sectionNarrative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 40
     },
     __self: this
   }, "Narrativa"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -240,7 +274,7 @@ var Filmes = function Filmes(_ref) {
     transitionLeave: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 41
     },
     __self: this
   }, categories[0].films.map(function (film) {
@@ -248,11 +282,11 @@ var Filmes = function Filmes(_ref) {
       className: "item",
       key: film.id,
       onClick: function onClick() {
-        return next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/detalhe/".concat(film.id));
+        return next_router__WEBPACK_IMPORTED_MODULE_7___default.a.push("/detalhe/".concat(film.id));
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 50
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -261,28 +295,28 @@ var Filmes = function Filmes(_ref) {
       alt: film.title_pt,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 51
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 52
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 53
       },
       __self: this
     }, film.title_pt), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
       className: "link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 54
       },
       __self: this
     }, "ver mais")));
@@ -291,14 +325,14 @@ var Filmes = function Filmes(_ref) {
     id: "sectionCommercials",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 61
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 62
     },
     __self: this
   }, "Comerciais"), categories[1].films.map(function (film) {
@@ -306,11 +340,11 @@ var Filmes = function Filmes(_ref) {
       className: "item",
       key: film.id,
       onClick: function onClick() {
-        return next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/detalhe/".concat(film.id));
+        return next_router__WEBPACK_IMPORTED_MODULE_7___default.a.push("/detalhe/".concat(film.id));
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 65
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -319,28 +353,28 @@ var Filmes = function Filmes(_ref) {
       alt: film.title_pt,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 66
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 67
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 68
       },
       __self: this
     }, film.title_pt), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
       className: "link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 69
       },
       __self: this
     }, "ver mais")));
@@ -349,14 +383,14 @@ var Filmes = function Filmes(_ref) {
     id: "sectionMusic",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 76
     },
     __self: this
   }, "Video Clips"), categories[2].films.map(function (film) {
@@ -364,11 +398,11 @@ var Filmes = function Filmes(_ref) {
       className: "item",
       key: film.id,
       onClick: function onClick() {
-        return next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/detalhe/".concat(film.id));
+        return next_router__WEBPACK_IMPORTED_MODULE_7___default.a.push("/detalhe/".concat(film.id));
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 79
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -377,35 +411,35 @@ var Filmes = function Filmes(_ref) {
       alt: film.title_pt,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 80
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 81
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 82
       },
       __self: this
     }, film.title_pt), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
       className: "link",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 83
       },
       __self: this
     }, "ver mais")));
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_footer__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 91
     },
     __self: this
   })));
@@ -422,7 +456,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("".concat("http://127.0.0.1:3333/api/v1", "/category/films"));
+          return axios__WEBPACK_IMPORTED_MODULE_4___default.a.get("".concat("http://127.0.0.1:3333/api/v1", "/category/films"));
 
         case 2:
           response = _context.sent;
@@ -437,7 +471,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
     }
   }, _callee, this);
 }));
-/* harmony default export */ __webpack_exports__["default"] = (Object(_src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_7__["default"])()(Filmes));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_8__["default"])()(Filmes));
 
 /***/ }),
 
@@ -977,7 +1011,7 @@ var ActiveLink = function ActiveLink(_ref) {
 
 /***/ }),
 
-/***/ 8:
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/filmes.js ***!
   \*******************************/
@@ -1074,6 +1108,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-addons-css-transition-group");
+
+/***/ }),
+
+/***/ "react-anchor-link-smooth-scroll":
+/*!**************************************************!*\
+  !*** external "react-anchor-link-smooth-scroll" ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-anchor-link-smooth-scroll");
 
 /***/ }),
 

@@ -2,3 +2,17 @@ $green: hsl(180, 40%, 40%);
 $grey: hsl(0, 0%, 75%);
 
 $bold: 'Panton-Bold';
+
+//Media Queries
+$mq-mobile:"(max-width:400px)";
+$mq-mobile-h:"(max-width:600px)";
+$mq-tablet:"(max-width:780px)";
+$mq-tablet-h:"(max-width:992px)";
+$mq-desktop:"(max-width:1200px)";
+$mq-desktop-h:"(max-width:1400px)";
+
+$mq-height-q:"(max-height:500px)";
+$mq-height-s:"(max-height:600px)";
+$mq-height-st:"(max-height:700px)";
+$mq-height-o:"(min-height:800px)";
+

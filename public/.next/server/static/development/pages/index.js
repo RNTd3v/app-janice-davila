@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/detalhe.js":
-/*!**************************!*\
-  !*** ./pages/detalhe.js ***!
-  \**************************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -106,24 +106,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _u_wave_react_vimeo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @u-wave/react-vimeo */ "@u-wave/react-vimeo");
-/* harmony import */ var _u_wave_react_vimeo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_u_wave_react_vimeo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_src_styles_main_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/hocs/withAnalytics */ "./src/hocs/withAnalytics.js");
-/* harmony import */ var _src_components_logo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/components/logo */ "./src/components/logo.js");
-/* harmony import */ var _src_components_menu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/components/menu */ "./src/components/menu.js");
-/* harmony import */ var _src_components_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/components/footer */ "./src/components/footer.js");
+/* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-addons-css-transition-group */ "react-addons-css-transition-group");
+/* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-anchor-link-smooth-scroll */ "react-anchor-link-smooth-scroll");
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _src_styles_main_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_src_styles_main_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/hocs/withAnalytics */ "./src/hocs/withAnalytics.js");
+/* harmony import */ var _src_components_logo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/components/logo */ "./src/components/logo.js");
+/* harmony import */ var _src_components_menu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/components/menu */ "./src/components/menu.js");
+/* harmony import */ var _src_components_language__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/components/language */ "./src/components/language.js");
+/* harmony import */ var _src_components_footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../src/components/footer */ "./src/components/footer.js");
 
-var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/pages/detalhe.js";
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/pages/index.js";
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
 
 
 
@@ -135,205 +142,336 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var videos = [{
-  id: 115783408,
-  name: 'Jambinai - Connection'
-}, {
-  id: 169408731,
-  name: 'Hoody - Like You'
-}];
 
-var Detalhe = function Detalhe(_ref) {
-  var film = _ref.film;
+
+var Films = function Films(_ref) {
+  var categories = _ref.categories;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "Janice D'Avila - Films")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, "Janice D'Avila - ", film.title_pt), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-    name: "description",
-    content: film.description_pt,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header", {
+    className: "header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-    property: "og:image",
-    content: film.picture,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-    property: "og:description",
-    content: film.description_pt,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-    property: "og:title",
-    content: film.title_pt,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 25
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_logo__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_logo__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_menu__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    language: "en",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_language__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    pt: "/filmes",
+    en: "/",
+    active: "en",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "show-mobile",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_menu__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    language: "pt",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "220",
+    href: "#sectionNarrative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
-    className: "film-detail container",
+  }, "Narrative"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "220",
+    href: "#sectionCommercials",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
+    },
+    __self: this
+  }, "Commercials"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "220",
+    href: "#sectionMusic",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "Music Videos"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
+    className: "films container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
-    className: "videos",
+    className: "film narrative",
+    id: "sectionNarrative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
-  }, film.videos.map(function (video) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("article", {
-      className: "player",
-      key: video.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_u_wave_react_vimeo__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      video: video.vimeo_id,
-      width: 860,
-      showByline: false,
-      showTitle: false,
-      showPortrait: false,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }));
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
-    className: "content",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
-    className: "category",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
-  }, film.category.name_pt), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 40
     },
     __self: this
-  }, film.title_pt), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "description",
+  }, "Narrative"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    transitionName: "example",
+    transitionAppear: true,
+    transitionAppearTimeout: 500,
+    transitionEnter: false,
+    transitionLeave: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 41
     },
     __self: this
-  }, film.description_pt))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_footer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, categories[0].films.map(function (film) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("article", {
+      className: "item",
+      key: film.id,
+      onClick: function onClick() {
+        return next_router__WEBPACK_IMPORTED_MODULE_7___default.a.push("/detail/".concat(film.id));
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: film.picture,
+      className: "picture",
+      alt: film.title,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+      className: "title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, film.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
+      className: "link",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, "see more")));
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    className: "film commercials",
+    id: "sectionCommercials",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: this
+  }, "Commercials"), categories[1].films.map(function (film) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("article", {
+      className: "item",
+      key: film.id,
+      onClick: function onClick() {
+        return next_router__WEBPACK_IMPORTED_MODULE_7___default.a.push("/detail/".concat(film.id));
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: film.picture,
+      className: "picture",
+      alt: film.title,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+      className: "title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    }, film.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
+      className: "link",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }, "see more")));
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    className: "film music",
+    id: "sectionMusic",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, "Music Videos"), categories[2].films.map(function (film) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("article", {
+      className: "item",
+      key: film.id,
+      onClick: function onClick() {
+        return next_router__WEBPACK_IMPORTED_MODULE_7___default.a.push("/detail/".concat(film.id));
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: film.picture,
+      className: "picture",
+      alt: film.title,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+      className: "title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
+      },
+      __self: this
+    }, film.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
+      className: "link",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 83
+      },
+      __self: this
+    }, "see more")));
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_components_footer__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
   })));
 };
 
-Detalhe.getInitialProps =
+Films.getInitialProps =
 /*#__PURE__*/
-function () {
-  var _ref3 = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref2) {
-    var query, response;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            query = _ref2.query;
-            _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("".concat("http://127.0.0.1:3333/api/v1", "/film/").concat(query.id));
+_asyncToGenerator(
+/*#__PURE__*/
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+  var response;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return axios__WEBPACK_IMPORTED_MODULE_4___default.a.get("".concat("http://127.0.0.1:3333/api/v1", "/category/films"));
 
-          case 3:
-            response = _context.sent;
-            return _context.abrupt("return", {
-              film: response.data
-            });
+        case 2:
+          response = _context.sent;
+          return _context.abrupt("return", {
+            categories: response.data
+          });
 
-          case 5:
-          case "end":
-            return _context.stop();
-        }
+        case 4:
+        case "end":
+          return _context.stop();
       }
-    }, _callee, this);
-  }));
-
-  return function (_x) {
-    return _ref3.apply(this, arguments);
-  };
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(_src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_6__["default"])()(Detalhe)); // https://github.com/u-wave/react-vimeo
+    }
+  }, _callee, this);
+}));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_src_hocs_withAnalytics__WEBPACK_IMPORTED_MODULE_8__["default"])()(Films));
 
 /***/ }),
 
@@ -379,6 +517,90 @@ var Footer = function Footer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./src/components/language.js":
+/*!************************************!*\
+  !*** ./src/components/language.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/RNTdesign/Sites/janice/janice-api/public/src/components/language.js";
+
+
+
+var Language = function Language(_ref) {
+  var pt = _ref.pt,
+      en = _ref.en,
+      active = _ref.active;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "language",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: en,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: 'link ' + (active === 'en' ? '-active' : ''),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "EN"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: pt,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: 'link ' + (active === 'pt' ? '-active' : ''),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "PT")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Language);
 
 /***/ }),
 
@@ -789,14 +1011,14 @@ var ActiveLink = function ActiveLink(_ref) {
 
 /***/ }),
 
-/***/ 9:
-/*!********************************!*\
-  !*** multi ./pages/detalhe.js ***!
-  \********************************/
+/***/ 5:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/detalhe.js */"./pages/detalhe.js");
+module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -809,17 +1031,6 @@ module.exports = __webpack_require__(/*! ./pages/detalhe.js */"./pages/detalhe.j
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
-
-/***/ }),
-
-/***/ "@u-wave/react-vimeo":
-/*!**************************************!*\
-  !*** external "@u-wave/react-vimeo" ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@u-wave/react-vimeo");
 
 /***/ }),
 
@@ -889,6 +1100,28 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "react-addons-css-transition-group":
+/*!****************************************************!*\
+  !*** external "react-addons-css-transition-group" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-addons-css-transition-group");
+
+/***/ }),
+
+/***/ "react-anchor-link-smooth-scroll":
+/*!**************************************************!*\
+  !*** external "react-anchor-link-smooth-scroll" ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-anchor-link-smooth-scroll");
+
+/***/ }),
+
 /***/ "react-ga":
 /*!***************************!*\
   !*** external "react-ga" ***!
@@ -901,4 +1134,4 @@ module.exports = require("react-ga");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=detalhe.js.map
+//# sourceMappingURL=index.js.map

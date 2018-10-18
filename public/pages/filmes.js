@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import axios from 'axios';
 import "../src/styles/main.scss";
 
@@ -27,6 +28,11 @@ const Filmes = ({ categories }) => (
                         <Menu language="pt" />
                         <Language pt="/filmes" en="/" active="pt" />
                     </div>
+                </div>
+                <div className="show-mobile">
+                    <AnchorLink offset='220' href='#sectionNarrative'>Narrativa</AnchorLink>
+                    <AnchorLink offset='220' href='#sectionCommercials'>Comerciais</AnchorLink>
+                    <AnchorLink offset='220' href='#sectionMusic'>Video Clips</AnchorLink>
                 </div>
             </header>
             <main className="films container">

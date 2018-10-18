@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: space-around;
     min-height: calc(100vh - 84px);
+    @media #{$mq-tablet} {
+        flex-direction: column;
+    }
     > .info {
         // flex: 1;
         > .title {
@@ -28,5 +31,8 @@
 
     > .form {
         width: 400px;
+        @media #{$mq-mobile-h} {
+            width: 100%;
+        }
     }
 }
