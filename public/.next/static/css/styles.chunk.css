@@ -20,6 +20,12 @@
   font-weight: normal;
   font-style: normal; }
 
+.my-box {
+  padding: 10px; }
+  @media (min-width: 1200px) {
+    .my-box {
+      padding: 20px; } }
+
 .admin {
   display: flex;
   flex-direction: column;
