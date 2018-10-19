@@ -18,7 +18,7 @@ export default () => Composed =>
           }
 
         componentDidMount() {
-            ReactGA.initialize('ID_ANALYTICS')
+            ReactGA.initialize('UA-127770883-1')
             ReactGA.pageview(window.location.pathname);
             this.setState({ isLoading: false })
         }

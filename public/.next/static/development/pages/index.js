@@ -19462,7 +19462,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
         _createClass(_class, [{
           key: "componentDidMount",
           value: function componentDidMount() {
-            react_ga__WEBPACK_IMPORTED_MODULE_2___default.a.initialize('ID_ANALYTICS');
+            react_ga__WEBPACK_IMPORTED_MODULE_2___default.a.initialize('UA-127770883-1');
             react_ga__WEBPACK_IMPORTED_MODULE_2___default.a.pageview(window.location.pathname);
             this.setState({
               isLoading: false
