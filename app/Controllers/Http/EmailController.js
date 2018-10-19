@@ -58,6 +58,7 @@ class EmailController {
 
     const email = await Email.find(params.id);
     await email.delete();
+    return {message: 'Email deleted'};
   }
 }
 

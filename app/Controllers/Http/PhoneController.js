@@ -53,6 +53,7 @@ class PhoneController {
   async destroy ({ params }) {
     const phone = await Phone.find(params.id);
     await phone.delete();
+    return {message: 'Phone deleted'};
   }
 }
 

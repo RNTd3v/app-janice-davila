@@ -36,3 +36,25 @@
         }
     }
 }
+
+.list-contact {
+    display: flex;
+    padding: 2rem;
+    align-items: initial;
+    justify-content: space-between;
+
+    .phones, .emails {
+        width: 50%;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        article {
+            padding: 1rem;
+            p {
+                margin: 10px 0
+            }
+        }
+    }
+}

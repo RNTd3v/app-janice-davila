@@ -58,6 +58,7 @@ class SocialMediaController {
 
     const socialmedia = await SocialMedia.find(params.id);
     await socialmedia.delete();
+    return {message: 'Social Media deleted'};
   }
 }
 

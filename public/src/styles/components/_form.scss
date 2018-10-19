@@ -55,6 +55,19 @@
                     margin-top: 29px;
                 }
             }
+
+            &.-three{
+                width: 33.33%;
+                padding: 0 .5rem;
+
+                small {
+                    margin-bottom: 1rem;
+                }
+
+                > .button {
+                    margin-top: 29px;
+                }
+            }
         }
 
         > .picture {
@@ -80,6 +93,10 @@
         @media #{$mq-mobile-h} {
             padding: 3rem;
         }
+    }
+
+    &.-contact {
+        padding: 1rem 5rem;
     }
 }
 

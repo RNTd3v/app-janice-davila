@@ -27,7 +27,7 @@ class Admin extends Component {
               <i className="fas fa-user-circle icon"></i>
               <h2 className="title">Bio</h2>
             </div>
-            <div className="item">
+            <div className="item" onClick={() => Router.push(`/admin/contact`)}>
               <i className="fas fa-envelope icon"></i>
               <h2 className="title">Contact</h2>
             </div>

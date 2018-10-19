@@ -273,6 +273,21 @@ main {
       .contact > .form {
         width: 100%; } }
 
+.list-contact {
+  display: flex;
+  padding: 2rem;
+  align-items: initial;
+  justify-content: space-between; }
+  .list-contact .phones, .list-contact .emails {
+    width: 50%; }
+  .list-contact .list {
+    display: flex;
+    flex-wrap: wrap; }
+    .list-contact .list article {
+      padding: 1rem; }
+      .list-contact .list article p {
+        margin: 10px 0; }
+
 .login {
   width: 100%;
   height: 97vh;
@@ -438,6 +453,13 @@ main {
         margin-bottom: 1rem; }
       .form.-grid > .col.-four > .button {
         margin-top: 29px; }
+    .form.-grid > .col.-three {
+      width: 33.33%;
+      padding: 0 .5rem; }
+      .form.-grid > .col.-three small {
+        margin-bottom: 1rem; }
+      .form.-grid > .col.-three > .button {
+        margin-top: 29px; }
   .form.-grid > .picture {
     width: 100%;
     padding: 2rem; }
@@ -455,6 +477,9 @@ main {
   @media (max-width: 600px) {
     .form.-video {
       padding: 3rem; } }
+
+.form.-contact {
+  padding: 1rem 5rem; }
 
 .formErrors {
   margin: 0 auto;
