@@ -6,10 +6,35 @@
     position: absolute;
     bottom: -10px;
     left: 50%;
-    margin-left: -10px; 
+    margin-left: -10px;
     transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 @mixin afterTextHover {
     width: 20px;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+// usage
+.my-box {
+  padding: 10px;
+
+  @include for-desktop-up {
+    padding: 20px;
+  }
 }
