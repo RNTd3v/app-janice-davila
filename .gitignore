@@ -1,6 +1,6 @@
 # Node modules
 node_modules
-
+.env
 package-lock.json
 public/node_modules
 public/yarn.lock
@@ -13,7 +13,4 @@ tmp
 
 # The development sqlite file
 database/development.sqlite
-
-# never add github
-.env
 

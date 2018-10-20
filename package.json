@@ -8,7 +8,7 @@
     "dev": "NEXT_FOLDER=public node server.js",
     "build": "NODE_ENV=production next build ./public",
     "export": "next export ./public",
-    "start": "NODE_ENV=production ENV_SILENT=true NEXT_FOLDER=public node server.js"
+    "start": "NODE_ENV=production NEXT_FOLDER=public node server.js"
   },
   "keywords": [
     "adonisjs",
