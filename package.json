@@ -9,6 +9,7 @@
     "build": "NODE_ENV=production next build ./public",
     "export": "next export ./public",
     "start": "NODE_ENV=production NEXT_FOLDER=public node server.js"
+    
   },
   "keywords": [
     "adonisjs",
