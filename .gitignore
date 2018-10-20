@@ -16,3 +16,4 @@ database/development.sqlite
 
 # never add github
 .env
+
