@@ -13,3 +13,6 @@ tmp
 
 # The development sqlite file
 database/development.sqlite
+
+# never add github
+.env
