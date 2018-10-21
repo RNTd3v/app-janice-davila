@@ -10,12 +10,9 @@ import withAnalytics from '../src/hocs/withAnalytics';
 // Components
 import Logo from '../src/components/logo';
 import Menu from '../src/components/menu';
+import Language from '../src/components/language';
 import Footer from '../src/components/footer';
 
-const videos = [
-    { id: 115783408, name: 'Jambinai - Connection' },
-    { id: 169408731, name: 'Hoody - Like You' },
-];
 
 const Detail = ({ film }) => (
     <div>
@@ -30,7 +27,10 @@ const Detail = ({ film }) => (
             <header>
                 <div className="container">
                     <Logo />
-                    <Menu language="en" />
+                    <div className="nav">
+                        <Menu language="en" />
+                        <Language pt={`/detalhe/${film.id}`} en={`/detail/${film.id}`} active="en" />
+                    </div>
                 </div>
             </header>
             <main className="film-detail container">

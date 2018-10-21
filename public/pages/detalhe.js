@@ -12,11 +12,6 @@ import Logo from '../src/components/logo';
 import Menu from '../src/components/menu';
 import Footer from '../src/components/footer';
 
-const videos = [
-    { id: 115783408, name: 'Jambinai - Connection' },
-    { id: 169408731, name: 'Hoody - Like You' },
-];
-
 const Detalhe = ({ film }) => (
     <div>
         <Head>
@@ -30,7 +25,10 @@ const Detalhe = ({ film }) => (
             <header>
                 <div className="container">
                     <Logo />
-                    <Menu language="pt" />
+                    <div className="nav">
+                        <Menu language="pt" />
+                        <Language pt={`/detalhe/${film.id}`} en={`/detail/${film.id}`} active="pt" />
+                    </div>
                 </div>
             </header>
             <main className="film-detail container">
