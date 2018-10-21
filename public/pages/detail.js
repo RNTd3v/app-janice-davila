@@ -14,6 +14,7 @@ import Language from '../src/components/language';
 import Footer from '../src/components/footer';
 
 
+
 const Detail = ({ film }) => (
     <div>
         <Head>
