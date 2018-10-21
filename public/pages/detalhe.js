@@ -10,6 +10,7 @@ import withAnalytics from '../src/hocs/withAnalytics';
 // Components
 import Logo from '../src/components/logo';
 import Menu from '../src/components/menu';
+import Language from '../src/components/language';
 import Footer from '../src/components/footer';
 
 const Detalhe = ({ film }) => (
