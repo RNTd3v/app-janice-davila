@@ -34,7 +34,7 @@ class ContactController {
 
     await Mail.raw(email, (message) => {
       message
-        .to('janicedavila.master@gmail.com')
+        .to('rntd3signer@gmail.com')
         .from('janicedavila.master@gmail.com')
         .subject(`${data.contact.subject}`)
     })
