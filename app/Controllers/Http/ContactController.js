@@ -25,7 +25,7 @@ class ContactController {
     await Contact.create(data.contact)
     console.log(data);
 
-    await Mail.send('emails.contact', (message) => {
+    await Mail.send('emails.contact', null, (message) => {
       message
         .to('rntd3signer@gmail.com')
         .from('janicedavila.master@gmail.com')
