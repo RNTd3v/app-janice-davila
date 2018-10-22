@@ -27,7 +27,7 @@ module.exports = {
     pool: true,
     port: 587,
     host: Env.get('SMTP_HOST'),
-    secure: false,
+    secure: true,
     auth: {
       user: Env.get('MAIL_USERNAME'),
       pass: Env.get('MAIL_PASSWORD')
