@@ -34,12 +34,10 @@ class AdminContact extends React.Component {
 
     componentDidMount() {
         contact.getPhone().then(res =>  {
-            console.log(res);
             this.setState({phones: res});
         })
 
         contact.getEmail().then(res =>  {
-            console.log(res);
             this.setState({emails: res});
         })
     }
