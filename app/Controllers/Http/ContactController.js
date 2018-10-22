@@ -20,19 +20,12 @@ class ContactController {
    * Create/save a new contact.
    * POST contacts
    */
-  async store ({ request, response }) {
+  async store ({ request }) {
     const data = request.all()
     await Contact.create(data.contact)
     console.log(data);
-    const email = `
-      <h2> Novo Contato</h2>
-      <p><strong>Nome:</strong> ${data.contact.name}</p>
-      <p><strong>Telefone:</strong> ${data.contact.phone}</p>
-      <p><strong>E-mail:</strong> ${data.contact.email}</p>
-      <p><strong>Mensagem:</strong> ${data.contact.message}</p>
-    `
 
-    await Mail.send(email, (message) => {
+    await Mail.send('emails.contact', (message) => {
       message
         .to('rntd3signer@gmail.com')
         .from('janicedavila.master@gmail.com')
