@@ -23,7 +23,7 @@ class ContactController {
   async store ({ request, response }) {
     const data = request.all()
     await Contact.create(data.contact)
-
+    console.log(data);
     const email = `
       <h2> Novo Contato</h2>
       <p><strong>Nome:</strong> ${data.contact.name}</p>
@@ -32,7 +32,7 @@ class ContactController {
       <p><strong>Mensagem:</strong> ${data.contact.message}</p>
     `
 
-    await Mail.raw(email, (message) => {
+    await Mail.send(email, (message) => {
       message
         .to('rntd3signer@gmail.com')
         .from('janicedavila.master@gmail.com')
