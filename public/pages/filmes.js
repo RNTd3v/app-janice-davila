@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import axios from 'axios';
 import "../src/styles/main.scss";
@@ -38,13 +37,7 @@ const Filmes = ({ categories }) => (
             <main className="films container">
                 <section className="film narrative" id="sectionNarrative">
                     <h2 className="title">Narrativa</h2>
-                    <ReactCSSTransitionGroup
-                        transitionName="example"
-                        transitionAppear={true}
-                        transitionAppearTimeout={500}
-                        transitionEnter={false}
-                        transitionLeave={false}
-                    >
+                   
                         {
                             categories[0].films.map(film => (
                                 <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
@@ -56,7 +49,6 @@ const Filmes = ({ categories }) => (
                                 </article>
                             ))
                         }
-                    </ReactCSSTransitionGroup>
                 </section>
                 <section className="film commercials" id="sectionCommercials">
                     <h2 className="title">Comerciais</h2>
