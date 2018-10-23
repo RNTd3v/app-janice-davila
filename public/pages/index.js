@@ -29,54 +29,30 @@ const Films = ({ categories }) => (
                     </div>
                 </div>
                 <div className="show-mobile">
-                    <AnchorLink offset='220' href='#sectionNarrative'>Narrative</AnchorLink>
-                    <AnchorLink offset='220' href='#sectionCommercials'>Commercials</AnchorLink>
-                    <AnchorLink offset='220' href='#sectionMusic'>Music Videos</AnchorLink>
+                    <AnchorLink offset='220' href='#Documentary'>Documentary</AnchorLink>
+                    <AnchorLink offset='220' href='#Narrative'>Narrative</AnchorLink>
+                    <AnchorLink offset='220' href='#Commercial'>Commercial</AnchorLink>
                 </div>
             </header>
             <main className="films container">
-                <section className="film narrative" id="sectionNarrative">
-                    <h2 className="title">Narrative</h2>
-                    {
-                            categories[0].films.map(film => (
-                                <article className="item" key={film.id} onClick={() => Router.push(`/detail/${film.id}`)}>
-                                    <img src={film.picture} className="picture" alt={film.title} />
-                                    <span className="content">
-                                        <h3 className="title">{film.title}</h3>
-                                        <small className="link">see more</small>
-                                    </span>
-                                </article>
-                            ))
-                    }
-                </section>
-                <section className="film commercials" id="sectionCommercials">
-                    <h2 className="title">Commercials</h2>
-                    {
-                        categories[1].films.map(film => (
-                            <article className="item" key={film.id} onClick={() => Router.push(`/detail/${film.id}`)}>
-                                <img src={film.picture} className="picture" alt={film.title} />
-                                <span className="content">
-                                    <h3 className="title">{film.title}</h3>
-                                    <small className="link">see more</small>
-                                </span>
-                            </article>
-                        ))
-                    }
-                </section>
-                <section className="film music" id="sectionMusic">
-                    <h2 className="title">Music Videos</h2>
-                    {
-                        categories[2].films.map(film => (
-                            <article className="item" key={film.id} onClick={() => Router.push(`/detail/${film.id}`)}>
-                                <img src={film.picture} className="picture" alt={film.title} />
-                                <span className="content">
-                                    <h3 className="title">{film.title}</h3>
-                                    <small className="link">see more</small>
-                                </span>
-                            </article>
-                        ))
-                    }
-                </section>
+                {
+                    categories.map(category => (
+                        <section className="film narrative" id={category.name}>
+                        <h2 className="title">{category.name_pt}</h2>
+                            {
+                                category.films.map(film => (
+                                    <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
+                                        <img src={film.picture} className="picture" alt={film.title_pt} />
+                                            <span className="content">
+                                                <h3 className="title">{film.title_pt}</h3>
+                                                <small className="link">ver mais</small>
+                                            </span>
+                                    </article>
+                                ))
+                            }
+                        </section>
+                    ))
+                }
                
             </main>
             <Footer />
