@@ -29,56 +29,30 @@ const Filmes = ({ categories }) => (
                     </div>
                 </div>
                 <div className="show-mobile">
-                    <AnchorLink offset='220' href='#sectionNarrative'>Narrativa</AnchorLink>
-                    <AnchorLink offset='220' href='#sectionCommercials'>Comerciais</AnchorLink>
-                    <AnchorLink offset='220' href='#sectionMusic'>Video Clips</AnchorLink>
+                    <AnchorLink offset='220' href='#Documentary'>Documentário</AnchorLink>
+                    <AnchorLink offset='220' href='#Narrative'>Narrativa</AnchorLink>
+                    <AnchorLink offset='220' href='#Commercial'>Comercial</AnchorLink>
                 </div>
             </header>
             <main className="films container">
-                <section className="film narrative" id="sectionNarrative">
-                    <h2 className="title">Narrativa</h2>
-                   
                         {
-                            categories[0].films.map(film => (
-                                <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
-                                    <img src={film.picture} className="picture" alt={film.title_pt} />
-                                    <span className="content">
-                                        <h3 className="title">{film.title_pt}</h3>
-                                        <small className="link">ver mais</small>
-                                    </span>
-                                </article>
+                            categories.map(category => (
+                                <section className="film narrative" id={category.name}>
+                                <h2 className="title">{category.name_pt}</h2>
+                                    {
+                                        category.films.map(film => (
+                                            <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
+                                                <img src={film.picture} className="picture" alt={film.title_pt} />
+                                                <span className="content">
+                                                    <h3 className="title">{film.title_pt}</h3>
+                                                    <small className="link">ver mais</small>
+                                                </span>
+                                            </article>
+                                        ))
+                                    }
+                                </section>
                             ))
                         }
-                </section>
-                <section className="film commercials" id="sectionCommercials">
-                    <h2 className="title">Comerciais</h2>
-                    {
-                        categories[1].films.map(film => (
-                            <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
-                                <img src={film.picture} className="picture" alt={film.title_pt} />
-                                <span className="content">
-                                    <h3 className="title">{film.title_pt}</h3>
-                                    <small className="link">ver mais</small>
-                                </span>
-                            </article>
-                        ))
-                    }
-                </section>
-                <section className="film music" id="sectionMusic">
-                    <h2 className="title">Video Clips</h2>
-                    {
-                        categories[2].films.map(film => (
-                            <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
-                                <img src={film.picture} className="picture" alt={film.title_pt} />
-                                <span className="content">
-                                    <h3 className="title">{film.title_pt}</h3>
-                                    <small className="link">ver mais</small>
-                                </span>
-                            </article>
-                        ))
-                    }
-                </section>
-               
             </main>
             <Footer />
         </section>
