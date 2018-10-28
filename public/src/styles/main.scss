@@ -1,4 +1,5 @@
 @import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+@import "~react-image-crop/lib/ReactCrop.scss";
 
 @import
 './general/fonts',
@@ -62,7 +63,7 @@ strong {
         justify-content: space-around;
         a {
             padding: 1rem;
-            background-color: $green;
+            // background-color: $green;
             color: white;
             text-decoration: none;
             font-family: 'Panton-Bold';

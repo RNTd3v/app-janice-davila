@@ -17,8 +17,14 @@ class Contato extends React.Component {
     constructor() {
         super();
         this.handleSubmit       = this.handleSubmit.bind(this);
+        this.handleChange       = this.handleChange.bind(this);
+        this.handleFormReset    = this.handleFormReset.bind(this);
         this.state = {
-            response: ''
+            response: null,
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
         }
     }
 
@@ -32,21 +38,39 @@ class Contato extends React.Component {
 
     async handleSubmit(event) {
         event.preventDefault();
-        const data = new FormData(event.target);
+        // const data = new FormData(event.target);
+        const {name, email, phone, message} = this.state;
         const contact = {
-            "name": data.get('name'),
-            "email": data.get('email'),
-            "phone": data.get('phone'),
-            "subject": "Formulário de Contato",
-            "message": data.get('message')
+            name, email, phone, message,
+            "subject": "Formulário de Contato"
         }
 
         const response = await axios.post(
             `${process.env.API_URL}/contact`, { contact }
         );
+        this.handleFormReset();
+        this.setState({
+            response: response.data.response_pt
+        });
+    }
 
-        this.setState({response});
+    handleChange(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
         
+        this.setState({
+          [name]: value
+        });
+    }
+
+    handleFormReset = () => {
+        this.setState({
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
+        })
     }
 
     render () {
@@ -86,13 +110,14 @@ class Contato extends React.Component {
                             }
                         </section>
                         <section className="form">
-                            <form className="form" onSubmit={this.handleSubmit}>
-                                <input type="text" id="name" name="name" className="input" placeholder="Nome" />
-                                <input type="email" id="email" name="email" className="input" placeholder="Email" />
-                                <MaskedInput mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} 
-                                id="phone" name="phone" className="input" placeholder="Telefone" />
-                                <textarea placeholder="Mensagem" id="message" name="message" className="textarea"></textarea>
+                            <form className="form" onSubmit={this.handleSubmit} onReset={this.handleFormReset}>
+                                <input type="text" id="name" name="name" className="input" placeholder="Nome" value={this.state.name} onChange={this.handleChange} />
+                                <input type="email" id="email" name="email" className="input" placeholder="Email" value={this.state.email} onChange={this.handleChange} />
+                                <MaskedInput mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, /\d/]} 
+                                id="phone" name="phone" className="input" placeholder="Telefone" value={this.state.phone} onChange={this.handleChange} />
+                                <textarea placeholder="Mensagem" id="message" name="message" className="textarea" value={this.state.message} onChange={this.handleChange}></textarea>
                                 <button className="button">Enviar</button>
+                                <p className="message-response">{this.state.response}</p>
                             </form>
                         </section>
                     </main>

@@ -1,7 +1,10 @@
 import React from 'react';
-import Router from 'next/router'
+import Router from 'next/router';
+import withAuth from  '../../src/hocs/withAuth';
+
+import ReactCrop, { makeAspectCrop } from "react-image-crop";
+
 import "../../src/styles/main.scss";
-import withAuth from  '../../src/hocs/withAuth'
 
 import CategoriesService from '../../src/services/Categories';
 const categories = new CategoriesService();
@@ -14,7 +17,7 @@ import FormErrors from '../../src/utils/FormErrors';
 class AdminFilm extends React.Component {
     constructor() {
         super();
-        this.handleChange = this.handleChange.bind(this);
+        this.saveImage = this.saveImage.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             category: Router.query.category,
@@ -30,16 +33,24 @@ class AdminFilm extends React.Component {
             pictureValid: false,
             formErrors: {title: '', titulo: '', picture: ''},
             update: false,
-            filmId: Router.query.idFilm
+            filmId: Router.query.idFilm,
+            image: null,
+            src: null,
+            crop: {
+                x: 5,
+                y: 15,
+                aspect: 16/9,
+                width: 90,
+            }
         }
     }
 
-    handleChange(file)
+    saveImage()
     {
         const category = this.state.category.toLowerCase();
         const title = this.state.title.toLowerCase().replace(/[\s-]/g,'-') || 'film';
         const data = new FormData();
-        data.append('picture', file[0]);
+        data.append('picture', this.state.finalImage);
         data.append('title', title);
         data.append('category', category);
 
@@ -47,6 +58,7 @@ class AdminFilm extends React.Component {
             this.setState({
                 picture: res.data
             });
+            this.setState({src: null});
             this.validateField('picture', res.data);
         })
     }
@@ -153,8 +165,81 @@ class AdminFilm extends React.Component {
         // /admin/:id/:category/film/:idFilm/:film/videos
     }
 
+    onSelectFile = e => {
+        if (e && e.length > 0) {
+          const reader = new FileReader();
+          reader.addEventListener(
+            "load",
+            () => {
+              this.setState({
+                src: reader.result
+              }),
+            false
+            }
+          );
+          reader.readAsDataURL(e[0]);
+        }
+    };
+    
+    onImageLoaded = async (image, pixelCrop) => {
+
+        this.setState({ image: image.src });
+
+        if (pixelCrop) {
+          const finalImage = await this.getCroppedImg(
+            image,
+            pixelCrop,
+            "newFile.jpeg"
+          );
+          this.setState({ finalImage });
+        }
+
+    };
+    
+    onCropComplete = async (crop, pixelCrop) => {
+        console.log(this.state.image)
+        const finalImage = await this.getCroppedImg(
+          this.state.image,
+          pixelCrop,
+          "newFile.jpeg"
+        );
+        this.setState({ finalImage });
+    };
+    
+    onCropChange = crop => {
+        this.setState({ crop });
+    };
+    
+    getCroppedImg(image, pixelCrop, fileName) {
+    
+        const canvas = document.createElement("canvas");
+        canvas.width = pixelCrop.width;
+        canvas.height = pixelCrop.height;
+        const ctx = canvas.getContext("2d");
+    
+        ctx.drawImage(
+          image,
+          pixelCrop.x,
+          pixelCrop.y,
+          pixelCrop.width,
+          pixelCrop.height,
+          0,
+          0,
+          pixelCrop.width,
+          pixelCrop.height
+        );
+    
+        // As a blob
+        return new Promise((resolve, reject) => {
+          canvas.toBlob(file => {
+            file.name = fileName;
+            resolve(file);
+          }, "image/jpeg");
+        });
+    }
+
     render () {
-        const { category, category_id } = this.state;
+        const { category, category_id, croppedImageUrl } = this.state;
         return (
             <section className="admin">
                 <header className="header">
@@ -183,9 +268,33 @@ class AdminFilm extends React.Component {
                         </div>
                         <div className="picture">
                             <label className="label">Picture*</label>
-                            <input type="file" id="picture" name="picture" className="input" placeholder="Picture" onChange={ (e) => this.handleChange(e.target.files) }/>
+                            <input 
+                                type="file" 
+                                id="picture" 
+                                name="picture" 
+                                className="input" 
+                                placeholder="Picture" 
+                                onChange={ (e) => this.onSelectFile(e.target.files) }
+                            />
+                            
+                            {this.state.src && (
+                                <ReactCrop
+                                    src={this.state.src}
+                                    crop={this.state.crop}
+                                    onImageLoaded={this.onImageLoaded}
+                                    // onComplete={this.onCropComplete}
+                                    onChange={this.onCropChange}
+                                    keepSelection={true}
+                                />
+                            )}
                             {
-                                this.state.picture ? <img src={this.state.picture} /> : null
+                                this.state.src ? 
+                                    <div className="cropImage">
+                                        {croppedImageUrl && <img alt="Crop" src={croppedImageUrl} />}
+                                        <div className='button -small' onClick={this.saveImage}>Save image</div>
+                                    </div>
+                                    : 
+                                    <img src={this.state.picture} />
                             }
                             <small className="required">*Required items</small>
                         </div>

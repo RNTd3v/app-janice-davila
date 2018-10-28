@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NEXT_FOLDER=public node server.js",
+    "build-dev": "next build ./public",
     "build": "NODE_ENV=production next build ./public",
     "export": "next export ./public",
     "start": "NODE_ENV=production NEXT_FOLDER=public node server.js"

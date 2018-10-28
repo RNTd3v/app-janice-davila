@@ -81,7 +81,7 @@
             }
 
             img {
-                width: 200px;
+                width: 450px;
                 margin-top: 2rem;
             }
         }
@@ -103,4 +103,11 @@
 .formErrors {
     margin: 0 auto;
     color: red;
+}
+
+.message-response {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+    color: $green;
 }

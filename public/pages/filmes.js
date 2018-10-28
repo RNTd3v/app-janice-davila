@@ -41,11 +41,11 @@ const Filmes = ({ categories }) => (
                                 <h2 className="title">{category.name_pt}</h2>
                                     {
                                         category.films.map(film => (
-                                            <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
+                                            <article className="item" key={film.id} >
                                                 <img src={film.picture} className="picture" alt={film.title_pt} />
                                                 <span className="content">
                                                     <h3 className="title">{film.title_pt}</h3>
-                                                    <small className="link">ver mais</small>
+                                                    <small className="link" onClick={() => Router.push(`/detalhe/${film.id}`)}>ver mais</small>
                                                 </span>
                                             </article>
                                         ))

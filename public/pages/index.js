@@ -37,14 +37,15 @@ const Films = ({ categories }) => (
             <main className="films container">
                 {
                     categories.map(category => (
-                        <section className="film narrative" id={category.name}>
-                        <h2 className="title">{category.name_pt}</h2>
+                        <section className="film narrative" id={category.name} key="category.id">
+                        <h2 className="title">{category.name}</h2>
                             {
                                 category.films.map(film => (
-                                    <article className="item" key={film.id} onClick={() => Router.push(`/detalhe/${film.id}`)}>
-                                        <img src={film.picture} className="picture" alt={film.title_pt} />
-                                            <span className="content">
-                                                <h3 className="title">{film.title_pt}</h3>
+                                    <article className="item" key={film.id} >
+                                        <img src={film.picture} className="picture" alt={film.title} />
+                                            <span className="content" onClick={() => Router.push(`/detail/${film.id}`)}>
+                                                <h3 className="title">{film.title}</h3>
+                                                <p className="description">{film.description}</p>
                                                 <small className="link">ver mais</small>
                                             </span>
                                     </article>

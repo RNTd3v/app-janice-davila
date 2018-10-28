@@ -25,14 +25,25 @@ class ContactController {
     await Contact.create(data.contact)
     console.log(data);
 
-    await Mail.send('emails.contact', null, (message) => {
+    const contact = `
+      <h2>Novo Contato</h2>
+      <p><strong>Nome:</strong> ${data.contact.name}</p>
+      <p><strong>Telefone:</strong> ${data.contact.phone}</p>
+      <p><strong>E-mail:</strong> ${data.contact.email}</p>
+      <p><strong>Mensagem:</strong> ${data.contact.message}</p>
+    `
+
+    await Mail.raw(contact, (message) => {
       message
-        .to('rntd3signer@gmail.com')
-        .from('janicedavila.master@gmail.com')
+        .to('janicedavila.master@gmail.com')
+        .from('Janice Davila')
         .subject(`${data.contact.subject}`)
     })
 
-    return 'Contato enviado com sucesso!'
+    return {
+      response: 'Contact sent successfully!',
+      response_pt: 'Contato enviado com sucesso!'
+    }
 
   }
 
