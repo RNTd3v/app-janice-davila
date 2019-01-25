@@ -30,7 +30,7 @@ const Films = ({ categories }) => (
                 </div>
                 <div className="show-mobile">
                     <AnchorLink offset='220' href='#Documentary'>Documentary</AnchorLink>
-                    <AnchorLink offset='220' href='#Narrative'>Narrative</AnchorLink>
+                    <AnchorLink offset='220' href='#Series'>Series</AnchorLink>
                     <AnchorLink offset='220' href='#Commercial'>Commercial</AnchorLink>
                 </div>
             </header>
