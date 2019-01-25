@@ -25,8 +25,10 @@
             }
 
             > .picture {
-                width: 100%;
-                max-width: 400px;
+                width: 435px;
+                height: 245px;
+                object-fit: cover;
+                object-position: center;
                 // transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
             }
             > .content {
