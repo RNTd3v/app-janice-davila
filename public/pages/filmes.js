@@ -17,7 +17,7 @@ import Footer from '../src/components/footer';
 const Filmes = ({ categories }) => (
     <div>
         <Head>
-            <title>Janice D'Avila - Filmes</title>
+            <title>Janice d'Avila - Cinematographer</title>
         </Head>
         <section>
             <header className="header">

@@ -16,7 +16,9 @@ export default class MyDocument extends Document {
                 <Head>
                     {this.props.styleTags}
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                    <meta name="author" content="Janice D'Avila" />
+                    <meta name="author" content="Janice d'Avila - Cinematographer" />
+                    <meta name="google-site-verification" content="jh46bLT3yK5mf-_D3kjzn73e6j52QgMj8idZeXS7xds" />
+                    <meta name="description" content="Janice d'Avila - Cinematographer" />
                     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"></link>
                 </Head>
                 <body>

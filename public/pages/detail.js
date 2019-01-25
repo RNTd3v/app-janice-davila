@@ -18,7 +18,7 @@ import Footer from '../src/components/footer';
 const Detail = ({ film }) => (
     <div>
         <Head>
-            <title>Janice D'Avila - {film.title}</title>
+            <title>Janice d'Avila - {film.title}</title>
             <meta name="description" content={film.description} />
             <meta property="og:image" content={film.picture} />
             <meta property="og:description" content={film.description} />

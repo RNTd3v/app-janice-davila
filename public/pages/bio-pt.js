@@ -17,7 +17,7 @@ import Footer from '../src/components/footer';
 const BioPt = ({ bio }) => (
     <div>
         <Head>
-            <title>Janice D'Avila - Bio</title>
+            <title>Janice d'Avila - Cinematographer</title>
         </Head>
         <section>
             <header className="header">

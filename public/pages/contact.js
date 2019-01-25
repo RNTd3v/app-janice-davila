@@ -79,7 +79,7 @@ class Contact extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>Janice D'Avila - Contact</title>
+                    <title>Janice d'Avila - Cinematographer</title>
                 </Head>
                 <section>
                     <header className="header">

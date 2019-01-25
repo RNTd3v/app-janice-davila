@@ -77,7 +77,7 @@ class Contato extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>Janice D'Avila - Contato</title>
+                    <title>Janice d'Avila - Cinematographer</title>
                 </Head>
                 <section>
                     <header className="header">
