@@ -6,6 +6,10 @@
     }
     .film {
         padding: 1rem;
+        width: 33.33%;
+        @media #{$mq-tablet-h} {
+            width: 100%;
+        }
         > .title {
             font-size: 1rem;
             margin-bottom: 2rem;
