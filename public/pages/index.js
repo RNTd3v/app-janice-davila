@@ -49,16 +49,16 @@ const Films = ({ categories }) => (
                                                 <small className="link">ver mais</small>
                                             </span>
                                     </article>
-                                ))
+                                )).sort((a, b) => a[0] > b[0] ? 1 : -1)
                             }
                         </section>
                     ))
                 }
-               
+
             </main>
             <Footer />
         </section>
-       
+
     </div>
 );
 

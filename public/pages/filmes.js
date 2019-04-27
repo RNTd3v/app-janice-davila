@@ -48,7 +48,7 @@ const Filmes = ({ categories }) => (
                                                     <small className="link" onClick={() => Router.push(`/detalhe/${film.id}`)}>ver mais</small>
                                                 </span>
                                             </article>
-                                        ))
+                                        )).sort((a, b) => a[0] > b[0] ? 1 : -1)
                                     }
                                 </section>
                             ))
@@ -56,7 +56,7 @@ const Filmes = ({ categories }) => (
             </main>
             <Footer />
         </section>
-       
+
     </div>
 );
 
