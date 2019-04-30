@@ -7,7 +7,7 @@ export default class CategoriesService {
       this.domain = process.env.API_URL
       this.fetch = this.fetch.bind(this)
     }
-  
+
     getCategories() {
       return this.fetch(`${this.domain}/category`, {
         method: 'GET'
@@ -27,7 +27,7 @@ export default class CategoriesService {
     }
 
     saveFilm(film) {
-        
+
         return this.fetch(`${this.domain}/films`, {
             method: 'POST',
             body: JSON.stringify(film)
@@ -36,7 +36,7 @@ export default class CategoriesService {
     }
 
     updateFilm(film, idFilm) {
-        
+
       return this.fetch(`${this.domain}/films/${idFilm}`, {
           method: 'PUT',
           body: JSON.stringify(film)
@@ -44,8 +44,17 @@ export default class CategoriesService {
 
     }
 
+    changeOrderFilm(film, idFilm) {
+
+      return this.fetch(`${this.domain}/films/${idFilm}`, {
+          method: 'PATCH',
+          body: JSON.stringify(film)
+      }).then(res => Promise.resolve(res))
+
+    }
+
     deleteFilm(idFilm) {
-        
+
       return this.fetch(`${this.domain}/films/${idFilm}`, {
           method: 'DELETE',
       }).then(res => Promise.resolve(res))
@@ -67,7 +76,7 @@ export default class CategoriesService {
 
     uploadPicture(data) {
         const headers = {}
-        
+
         if (auth.loggedIn()){
             headers['Authorization'] = 'Bearer ' + localStorage.getItem('id_token')
         }
@@ -90,17 +99,17 @@ export default class CategoriesService {
           throw error
         }
     }
-  
+
     fetch(url, options){
       const headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
-  
+
       if (auth.loggedIn()){
         headers['Authorization'] = 'Bearer ' + localStorage.getItem('id_token')
       }
-  
+
       return fetch(url, {
         headers,
         ...options

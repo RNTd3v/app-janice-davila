@@ -40,7 +40,9 @@ const Filmes = ({ categories }) => (
                                 <section className="film narrative" id={category.name}>
                                 <h2 className="title">{category.name_pt}</h2>
                                     {
-                                        category.films.map(film => (
+                                        category.films
+                                        .sort((a, b) => a.order_by - b.order_by)
+                                        .map(film => (
                                             <article className="item" key={film.id} >
                                                 <img src={film.picture} className="picture" alt={film.title_pt} />
                                                 <span className="content">
@@ -48,7 +50,7 @@ const Filmes = ({ categories }) => (
                                                     <small className="link" onClick={() => Router.push(`/detalhe/${film.id}`)}>ver mais</small>
                                                 </span>
                                             </article>
-                                        )).sort((a, b) => a[0] > b[0] ? 1 : -1)
+                                        ))
                                     }
                                 </section>
                             ))

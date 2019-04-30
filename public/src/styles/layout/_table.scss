@@ -4,6 +4,11 @@
     > .row {
         display: flex;
         border-bottom: 1px solid #2f2f2f;
+        .fa-bars {
+          display: flex;
+          align-items: center;
+          cursor: move;
+        }
 
         &.-head {
             font-family: $bold;

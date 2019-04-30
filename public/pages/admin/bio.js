@@ -8,6 +8,12 @@ import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
+import dynamic from 'next/dynamic'
+
+const CKEditor = dynamic(() => import('../../src/components/CKEditor'), {
+  ssr: false
+})
+
 import BioService from '../../src/services/BioService';
 const bio = new BioService();
 
@@ -17,7 +23,7 @@ import Footer from '../../src/components/footer';
 class AdminBio extends React.Component {
     constructor() {
         super();
-        
+
         this.onEditorStateChange = this.onEditorStateChange.bind(this);
         this.onEditorStateChangePt = this.onEditorStateChangePt.bind(this);
         this.save = this.save.bind(this);
@@ -33,8 +39,13 @@ class AdminBio extends React.Component {
 
     componentDidMount() {
         bio.getBio().then(res =>  {
-            const html = res.description;
+          this.setState({
+            description: res.description,
+            description_pt: res.description_pt
+          })
+          /*const html = res.description;
             const htmlPt = res.description_pt;
+
             const contentBlock = htmlToDraft(html);
             const contentBlockPt = htmlToDraft(htmlPt);
             if (contentBlock) {
@@ -46,26 +57,26 @@ class AdminBio extends React.Component {
                     editorState,
                     editorStatePt
                 });
-            }
+            }*/
         });
     }
 
     onEditorStateChange (editorState) {
-        const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
-        this.setState({
-          editorState,
-          description: html
-        });
-        console.log(this.state.description);
+      this.setState({
+        description: editorState
+      });
     };
 
     onEditorStateChangePt (editorStatePt) {
-        const html = draftToHtml(convertToRaw(editorStatePt.getCurrentContent()))
+        /*const html = draftToHtml(convertToRaw(editorStatePt.getCurrentContent()))
         this.setState({
           editorStatePt,
           description_pt: html
         });
-        console.log(this.state.description_pt);
+        console.log(this.state.description_pt);*/
+        this.setState({
+          description_pt: editorStatePt
+        });
     };
 
     save() {
@@ -81,7 +92,7 @@ class AdminBio extends React.Component {
     }
 
     render () {
-        const { editorState, editorStatePt } = this.state;
+        const { editorState, editorStatePt, description, description_pt } = this.state;
         return (
             <section className="admin">
                 <header className="header">
@@ -94,20 +105,17 @@ class AdminBio extends React.Component {
                 <main className="main">
                     <div className="editor">
                         <h3 className="title">Content (En)</h3>
-                        <Editor
-                            editorState={editorState}
-                            toolbarClassName="toolbarClassName"
-                            wrapperClassName="wrapperClassName"
-                            editorClassName="editorClassName"
-                            onEditorStateChange={this.onEditorStateChange}
-                            toolbar={{
-                                options: ['inline', 'fontSize', 'list', 'textAlign', 'colorPicker', 'link', 'history'],
+                        <CKEditor
+                            data={description}
+                            onChange={ (event, editor) => {
+                              const data = editor.getData();
+                              this.onEditorStateChange(data);
                             }}
-                        />
+                          />
                     </div>
                     <div className="editor">
                         <h3 className="title">Contéudo (Pt)</h3>
-                        <Editor
+                        {/*<Editor
                             editorState={editorStatePt}
                             toolbarClassName="toolbarClassName"
                             wrapperClassName="wrapperClassName"
@@ -116,7 +124,14 @@ class AdminBio extends React.Component {
                             toolbar={{
                                 options: ['inline', 'fontSize', 'list', 'textAlign', 'colorPicker', 'link', 'history'],
                             }}
-                        />
+                          />*/}
+                          <CKEditor
+                            data={description_pt}
+                            onChange={ (event, editor) => {
+                              const data = editor.getData();
+                              this.onEditorStateChangePt(data);
+                            }}
+                          />
                     </div>
                     <button className='button -center' onClick={this.save}>Save</button>
                 </main>

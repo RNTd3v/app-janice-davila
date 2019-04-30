@@ -18,7 +18,7 @@
         flex-direction: column;
         flex-grow: 1;
         min-height: inherit;
-        
+
         > .title {
             margin-top: 50px;
             text-align: center;
@@ -81,7 +81,7 @@
                         position: absolute;
                         bottom: -10px;
                         left: 50%;
-                        margin-left: -10px; 
+                        margin-left: -10px;
                         transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
                     }
                 }
@@ -138,4 +138,11 @@
             }
         }
     }
+}
+
+.ck.ck-editor__main>.ck-editor__editable {
+  background: #333 !important;
+}
+.ck-file-dialog-button {
+  display: none !important;
 }

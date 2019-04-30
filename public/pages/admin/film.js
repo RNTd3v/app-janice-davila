@@ -21,6 +21,7 @@ class AdminFilm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             category: Router.query.category,
+            order_by: 0,
             title: "",
             title_pt: "",
             description: "",
@@ -64,9 +65,10 @@ class AdminFilm extends React.Component {
     }
 
     handleInput (e) {
+      console.log(e.target.name);
         const name = e.target.name;
         const value = e.target.value;
-        this.setState({[name]: value}, 
+        this.setState({[name]: value},
             () => { this.validateField(name, value) });
     }
 
@@ -80,6 +82,7 @@ class AdminFilm extends React.Component {
                 description_pt: res.description_pt,
                 picture: res.picture,
                 is_active: res.is_active,
+                order_by: res.order_by,
                 titleValid: true,
                 titlePtValid: true,
                 pictureValid: true,
@@ -95,7 +98,7 @@ class AdminFilm extends React.Component {
         let titleValid = this.state.titleValid;
         let titlePtValid = this.state.titlePtValid;
         let pictureValid = this.state.pictureValid;
-      
+
         switch(fieldName) {
           case 'title':
             titleValid = value.length >= 3;
@@ -113,7 +116,7 @@ class AdminFilm extends React.Component {
             break;
         }
         this.setState({
-            formErrors: 
+            formErrors:
                 fieldValidationErrors,
                 titleValid,
                 titlePtValid,
@@ -127,30 +130,32 @@ class AdminFilm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const { 
-            title, 
-            title_pt, 
-            description, 
+        const {
+            title,
+            title_pt,
+            description,
             description_pt,
             is_active,
             picture,
             category_id,
             update,
             filmId,
+            order_by,
             category
         } = this.state;
 
         const data = {
-            title, 
-            title_pt, 
-            description, 
+            title,
+            title_pt,
+            description,
             description_pt,
             is_active,
             picture,
-            category_id 
+            order_by,
+            category_id
         }
 
-        update 
+        update
         ?
             categories.updateFilm(data, filmId).then(res => {
                 Router.push(`/admin/${res.data.id}/videos`)
@@ -180,7 +185,7 @@ class AdminFilm extends React.Component {
           reader.readAsDataURL(e[0]);
         }
     };
-    
+
     onImageLoaded = async (image, pixelCrop) => {
 
         this.setState({ image: image.src });
@@ -195,7 +200,7 @@ class AdminFilm extends React.Component {
         }
 
     };
-    
+
     onCropComplete = async (crop, pixelCrop) => {
         console.log(this.state.image)
         const finalImage = await this.getCroppedImg(
@@ -205,18 +210,18 @@ class AdminFilm extends React.Component {
         );
         this.setState({ finalImage });
     };
-    
+
     onCropChange = crop => {
         this.setState({ crop });
     };
-    
+
     getCroppedImg(image, pixelCrop, fileName) {
-    
+
         const canvas = document.createElement("canvas");
         canvas.width = pixelCrop.width;
         canvas.height = pixelCrop.height;
         const ctx = canvas.getContext("2d");
-    
+
         ctx.drawImage(
           image,
           pixelCrop.x,
@@ -228,7 +233,7 @@ class AdminFilm extends React.Component {
           pixelCrop.width,
           pixelCrop.height
         );
-    
+
         // As a blob
         return new Promise((resolve, reject) => {
           canvas.toBlob(file => {
@@ -254,29 +259,34 @@ class AdminFilm extends React.Component {
                     <form className="form -grid" onSubmit={this.handleSubmit}>
                         <div className="col">
                             <small>English</small>
-                            <input type="text" id="title" name="title" className="input" 
+                            <input type="text" id="title" name="title" className="input"
                                 value={this.state.title} placeholder="Title*" onChange={(event) => this.handleInput(event)} />
-                            <textarea placeholder="Description" id="description" name="description" 
+                            <textarea placeholder="Description" id="description" name="description"
                                 value={this.state.description} className="textarea" onChange={(event) => this.handleInput(event)}></textarea>
                         </div>
                         <div className="col">
                             <small>Portuguese</small>
-                            <input type="text" id="titulo" name="title_pt" className="input" 
+                            <input type="text" id="titulo" name="title_pt" className="input"
                                 value={this.state.title_pt} placeholder="Título*" onChange={(event) => this.handleInput(event)} />
-                            <textarea placeholder="Descrição" id="descricao" name="description_pt" 
+                            <textarea placeholder="Descrição" id="descricao" name="description_pt"
                                 value={this.state.description_pt} className="textarea" onChange={(event) => this.handleInput(event)}></textarea>
+                        </div>
+                        <div className="order_by">
+                            <small>Order</small>
+                            <input type="number" min="0" id="orderBy" name="order_by" className="input"
+                                value={this.state.order_by} placeholder="Order" onChange={(event) => this.handleInput(event)} />
                         </div>
                         <div className="picture">
                             <label className="label">Picture*</label>
-                            <input 
-                                type="file" 
-                                id="picture" 
-                                name="picture" 
-                                className="input" 
-                                placeholder="Picture" 
+                            <input
+                                type="file"
+                                id="picture"
+                                name="picture"
+                                className="input"
+                                placeholder="Picture"
                                 onChange={ (e) => this.onSelectFile(e.target.files) }
                             />
-                            
+
                             {this.state.src && (
                                 <ReactCrop
                                     src={this.state.src}
@@ -288,12 +298,12 @@ class AdminFilm extends React.Component {
                                 />
                             )}
                             {
-                                this.state.src ? 
+                                this.state.src ?
                                     <div className="cropImage">
                                         {croppedImageUrl && <img alt="Crop" src={croppedImageUrl} />}
                                         <div className='button -small' onClick={this.saveImage}>Save image</div>
                                     </div>
-                                    : 
+                                    :
                                     <img src={this.state.picture} />
                             }
                             <small className="required">*Required items</small>
