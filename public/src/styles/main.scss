@@ -22,6 +22,7 @@
 './components/form',
 './components/logo',
 './components/menu',
+'./components/modal',
 './components/language',
 './components/loading',
 './components/react-draft',
@@ -52,6 +53,9 @@ strong {
     margin: 0 auto;
     @media #{$mq-tablet-h} {
         max-width: 90%;
+    }
+    @media #{$mq-mobile-h} {
+      max-width: 100%;
     }
 }
 

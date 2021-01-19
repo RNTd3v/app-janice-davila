@@ -1,10 +1,10 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { isMobile } from "react-device-detect";
 import axios from 'axios';
 import "../src/styles/main.scss";
 
 import Head from 'next/head';
-import Router from 'next/router'
 
 import withAnalytics from '../src/hocs/withAnalytics';
 
@@ -12,11 +12,51 @@ import withAnalytics from '../src/hocs/withAnalytics';
 import Logo from '../src/components/logo';
 import Menu from '../src/components/menu';
 import Language from '../src/components/language';
+import ModalVimeo from '../src/components/modal-vimeo';
 import Footer from '../src/components/footer';
 
-const Films = ({ categories }) => (
-    <div>
+class Films extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      categories: [],
+      showModalVimeo: false,
+      selectedFilm: {}
+    }
+
+    this.hideModalVimeo = this.hideModalVimeo.bind(this);
+  }
+
+  componentDidMount() {
+    this.getFilms();
+  }
+
+  async getFilms() {
+    const { data } = await axios.get(
+      `${process.env.API_URL}/category/films/videos`
+    );
+    this.setState({categories: data});
+  }
+
+  selectVideo(film) {
+    const selectedFilm = {
+      ...film,
+      vimeo_id: film.videos[0].vimeo_id
+    }
+    this.setState({ selectedFilm, showModalVimeo: true });
+  }
+
+  hideModalVimeo() {
+    this.setState({ selectedFilm: null, showModalVimeo: false });
+  }
+
+  render() {
+    const { categories, showModalVimeo } = this.state;
+    return (
+      <div>
         <Head>
+            <html lang="en-US" />
             <title>Janice d'Avila - Cinematographer</title>
         </Head>
         <section>
@@ -37,38 +77,40 @@ const Films = ({ categories }) => (
             <main className="films container">
                 {
                     categories.map(category => (
-                        <section className="film narrative" id={category.name} key="category.id">
-                        <h2 className="title">{category.name}</h2>
+                        <section className="film narrative" id={category.name} key={category.id}>
+                          <h2 className="title">{category.name}</h2>
                             {
                                 category.films
                                 .sort((a, b) => a.order_by - b.order_by)
                                 .map(film => (
-                                    <article className="item" key={film.id} >
-                                        <img src={film.picture} className="picture" alt={film.title} />
-                                            <span className="content" onClick={() => Router.push(`/detail/${film.id}`)}>
-                                                <h3 className="title">{film.title}</h3>
-                                                <p className="description">{film.description}</p>
-                                                <small className="link">ver mais</small>
-                                            </span>
+                                  <article className={'item ' + (isMobile ? '-mobile' : '')} key={film.id} onClick={() => this.selectVideo(film)}>
+                                      <img src={`https://www.janicedavila.com/${film.picture}`} className="picture" alt={film.title} />
+                                      <span className="content">
+                                        <h3 className="title">{film.title}</h3>
+                                        <p className="description">{film.description}</p>
+                                        <i className="fas fa-play-circle player"></i>
+                                      </span>
                                     </article>
                                 ))
                             }
+
                         </section>
                     ))
                 }
-
+                {
+                  showModalVimeo
+                  ? <div className="modal-container">
+                      <ModalVimeo film={this.state.selectedFilm} hideModalVimeo={this.hideModalVimeo} />
+                    </div>
+                  : null
+                }
             </main>
             <Footer />
         </section>
 
     </div>
-);
-
-Films.getInitialProps = async () => {
-    const response = await axios.get(
-        `${process.env.API_URL}/category/films`
     );
-    return { categories: response.data }
+  }
 }
 
 export default withAnalytics()(Films);

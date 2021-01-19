@@ -1,18 +1,18 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import axios from 'axios';
-import "../src/styles/main.scss";
+import "../../src/styles/main.scss";
 
 import Head from 'next/head';
 import Router from 'next/router'
 
-import withAnalytics from '../src/hocs/withAnalytics';
+import withAnalytics from '../../src/hocs/withAnalytics';
 
 // Components
-import Logo from '../src/components/logo';
-import Menu from '../src/components/menu';
-import Language from '../src/components/language';
-import Footer from '../src/components/footer';
+import Logo from '../../src/components/logo';
+import Menu from '../../src/components/menu';
+import Language from '../../src/components/language';
+import Footer from '../../src/components/footer';
 
 const Filmes = ({ categories }) => (
     <div>

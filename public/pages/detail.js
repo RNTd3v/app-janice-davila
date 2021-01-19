@@ -44,6 +44,8 @@ const Detail = ({ film }) => (
                                 showByline={false}
                                 showTitle={false}
                                 showPortrait={false}
+                                autoplay={true}
+                                responsive={true}
                             />
                         </article>
                     ))}

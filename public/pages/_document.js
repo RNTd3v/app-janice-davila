@@ -3,16 +3,24 @@ import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
 
-    static getInitialProps({ renderPage }) {
+    lang = 'en';
+
+    static getInitialProps(ctx) {
         const sheet = new ServerStyleSheet();
+        const { pathname, renderPage } = ctx;
         const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
         const styleTags = sheet.getStyleElement();
-        return { ...page, styleTags };
+
+        if (!pathname.startsWith("/static")) {
+          this.lang = pathname.startsWith("/pt") ? "pt" : "en";
+        }
+
+        return { ...page, styleTags, lang: this.lang };
     }
 
     render() {
         return (
-            <html>
+            <html lang={this.props.lang}>
                 <Head>
                     {this.props.styleTags}
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />

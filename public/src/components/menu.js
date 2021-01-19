@@ -8,12 +8,12 @@ const Menu = ({language = 'en'}) => (
             <ul>
                 <li>
                     {
-                        language === 'pt' 
-                        ? 
-                            <ActiveLink href="/filmes" activeClassName="active">
+                        language === 'pt'
+                        ?
+                            <ActiveLink href="/pt/filmes" activeClassName="active">
                                 <a>Filmes</a>
-                            </ActiveLink> 
-                        : 
+                            </ActiveLink>
+                        :
                             <ActiveLink href="/" activeClassName="active">
                                 <a>Films</a>
                             </ActiveLink>
@@ -21,12 +21,12 @@ const Menu = ({language = 'en'}) => (
                 </li>
                 <li>
                     {
-                        language === 'pt' 
-                        ? 
+                        language === 'pt'
+                        ?
                             <ActiveLink href="/bio-pt" activeClassName="active">
                                 <a>Bio</a>
-                            </ActiveLink> 
-                        : 
+                            </ActiveLink>
+                        :
                             <ActiveLink href="/bio" activeClassName="active">
                                 <a>Bio</a>
                             </ActiveLink>
@@ -34,12 +34,12 @@ const Menu = ({language = 'en'}) => (
                 </li>
                 <li>
                     {
-                        language === 'pt' 
-                        ? 
+                        language === 'pt'
+                        ?
                             <ActiveLink href="/contato" activeClassName="active">
                                 <a>Contato</a>
-                            </ActiveLink> 
-                        : 
+                            </ActiveLink>
+                        :
                             <ActiveLink href="/contact" activeClassName="active">
                                 <a>Contact</a>
                             </ActiveLink>
@@ -49,7 +49,7 @@ const Menu = ({language = 'en'}) => (
         </nav>
         <SocialMedia />
     </div>
-    
+
 );
 
 export default Menu;

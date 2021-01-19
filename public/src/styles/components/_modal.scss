@@ -1,0 +1,76 @@
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  background: rgba(0, 0, 0, .7);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal {
+    min-height: initial;
+    background: #3a3737;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 782px;
+    .content {
+      color: white;
+      padding: 1rem 2rem 2rem;
+      position: relative;
+      @media #{$mq-mobile-h} {
+        padding: .5rem;
+      }
+      .title {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-right: 3rem;
+        @media #{$mq-mobile-h} {
+          font-size: 1.3rem;
+        }
+      }
+      .description {
+        color: #3d8f8f;
+      }
+      .button {
+        background: black;
+        padding: 0;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        font-weight: 100;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @media #{$mq-mobile-h} {
+          top: 0;
+        }
+        &:hover {
+          background: #3d8f8f;
+        }
+      }
+    }
+    .video {
+      > .player {
+        iframe {
+            width: 100%;
+            @media #{$mq-desktop} {
+                height: 400px;
+            }
+            @media #{$mq-tablet} {
+                height: 300px;
+            }
+            @media #{$mq-mobile-h} {
+                height: 200px;
+            }
+        }
+      }
+    }
+  }
+}

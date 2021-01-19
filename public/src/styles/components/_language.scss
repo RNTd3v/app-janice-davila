@@ -1,5 +1,8 @@
 .language {
     padding-left: 2rem;
+    @media #{$mq-mobile-h} {
+      padding-left: 1rem;
+    }
     > .container {
         display: flex;
         align-items: center;
@@ -34,7 +37,7 @@
                         position: absolute;
                         bottom: -5px;
                         left: 50%;
-                        margin-left: -7.5px; 
+                        margin-left: -7.5px;
                     }
                 }
             }
