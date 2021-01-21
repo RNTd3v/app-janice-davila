@@ -16,6 +16,7 @@ import FormErrors from '../../src/utils/FormErrors';
 
 class AdminFilm extends React.Component {
     constructor() {
+      console.log(Router)
         super();
         this.saveImage = this.saveImage.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);

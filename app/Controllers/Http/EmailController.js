@@ -13,7 +13,7 @@ class EmailController {
     return await Email.all();
   }
 
-  
+
   /**
    * Create/save a new email.
    * POST emails
@@ -23,7 +23,7 @@ class EmailController {
     const data = request.all();
     const email = await Email.create(data);
     return email;
-  
+
   }
 
   /**
@@ -34,7 +34,7 @@ class EmailController {
     return await Email.find(params.id);
   }
 
-  
+
   /**
    * Update email details.
    * PUT or PATCH emails/:id
@@ -58,7 +58,7 @@ class EmailController {
 
     const email = await Email.find(params.id);
     await email.delete();
-    return {message: 'Email deleted'};
+    return {message: 'Email deletado com sucesso!'};
   }
 }
 

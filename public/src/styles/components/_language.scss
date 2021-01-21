@@ -3,6 +3,13 @@
     @media #{$mq-mobile-h} {
       padding-left: 1rem;
     }
+    @media #{$mq-mobile} {
+      padding: 0;
+      padding-top: 1rem;
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
     > .container {
         display: flex;
         align-items: center;

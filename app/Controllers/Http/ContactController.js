@@ -15,7 +15,7 @@ class ContactController {
     return await Contact.all();
   }
 
-  
+
   /**
    * Create/save a new contact.
    * POST contacts
@@ -23,7 +23,6 @@ class ContactController {
   async store ({ request }) {
     const data = request.all()
     await Contact.create(data.contact)
-    console.log(data);
 
     const contact = `
       <h2>Novo Contato</h2>
@@ -61,7 +60,7 @@ class ContactController {
    */
   async destroy ({ params }) {
     await Contact.delete(params.id);
-    return 'Excluido com sucesso!';
+    return {message: 'Contato deletado com sucesso!'};
   }
 }
 

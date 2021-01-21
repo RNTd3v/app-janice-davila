@@ -1,0 +1,13 @@
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5rem;
+  gap: 20px;
+  @media #{$mq-mobile-h} {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 5rem 0;
+  }
+  .one-col {
+    grid-column: 1/3;
+  }
+}

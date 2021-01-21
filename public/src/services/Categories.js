@@ -1,6 +1,7 @@
 import AuthService from './AuthService';
 
 const auth = new AuthService();
+import { toast } from 'react-toastify';
 
 export default class CategoriesService {
     constructor() {
@@ -95,6 +96,7 @@ export default class CategoriesService {
           return response
         } else {
           var error = new Error(response.statusText)
+          toast.error('Houve um erro, contate o administrador ou tente novamente!');
           error.response = response
           throw error
         }
@@ -116,5 +118,11 @@ export default class CategoriesService {
       })
       .then(this._checkStatus)
       .then(response => response.json())
+      .then(response => {
+        if (!!response.message) {
+          toast.success(response.message);
+        }
+        return response;
+      })
     }
   }

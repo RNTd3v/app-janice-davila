@@ -14,7 +14,7 @@ class SocialMediaController {
     return await SocialMedia.all();
   }
 
-  
+
   /**
    * Create/save a new socialmedia.
    * POST socialmedias
@@ -34,7 +34,7 @@ class SocialMediaController {
     return await SocialMedia.find(params.id);
   }
 
-  
+
   /**
    * Update socialmedia details.
    * PUT or PATCH socialmedias/:id
@@ -58,7 +58,7 @@ class SocialMediaController {
 
     const socialmedia = await SocialMedia.find(params.id);
     await socialmedia.delete();
-    return {message: 'Social Media deleted'};
+    return {message: 'Social Media deletado com sucesso!'};
   }
 }
 

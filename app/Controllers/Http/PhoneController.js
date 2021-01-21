@@ -13,7 +13,7 @@ class PhoneController {
     return await Phone.all();
   }
 
-  
+
   /**
    * Create/save a new phone.
    * POST phones
@@ -53,7 +53,7 @@ class PhoneController {
   async destroy ({ params }) {
     const phone = await Phone.find(params.id);
     await phone.delete();
-    return {message: 'Phone deleted'};
+    return {message: 'Telefone deletado com sucesso!'};
   }
 }
 

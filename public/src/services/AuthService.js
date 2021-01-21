@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 export default class AuthService {
     constructor() {
       this.domain = process.env.API_URL
@@ -5,7 +6,7 @@ export default class AuthService {
       this.login = this.login.bind(this)
       this.getProfile = this.getProfile.bind(this)
     }
-  
+
     login(email, password) {
       return this.fetch(`${this.domain}/authenticate`, {
         method: 'POST',
@@ -24,58 +25,65 @@ export default class AuthService {
       })
 
     }
-  
+
     loggedIn(){
       return this.getToken();
     }
-  
+
     setProfile(profile){
       localStorage.setItem('profile', JSON.stringify(profile))
     }
-  
+
     getProfile(){
       const profile = localStorage.getItem('profile')
       return profile ? JSON.parse(localStorage.profile) : {}
     }
-  
+
     setToken(idToken){
       localStorage.setItem('id_token', idToken)
     }
-  
+
     getToken(){
       return localStorage.getItem('id_token')
     }
-  
+
     logout(){
       localStorage.removeItem('id_token');
       localStorage.removeItem('profile');
     }
-  
+
     _checkStatus(response) {
       if (response.status >= 200 && response.status < 300) {
         return response
       } else {
         var error = new Error(response.statusText)
+        toast.error('Houve um erro, contate o administrador ou tente novamente!');
         error.response = response
         throw error
       }
     }
-  
+
     fetch(url, options){
       const headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
-  
+
       if (this.loggedIn()){
         headers['Authorization'] = 'Bearer ' + this.getToken()
       }
-  
+
       return fetch(url, {
         headers,
         ...options
       })
       .then(this._checkStatus)
       .then(response => response.json())
+      .then(response => {
+        if (!!response.message) {
+          toast.success(response.message);
+        }
+        return response;
+      })
     }
   }

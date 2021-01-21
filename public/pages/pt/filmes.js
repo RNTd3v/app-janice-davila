@@ -23,7 +23,7 @@ const Filmes = ({ categories }) => (
             <header className="header">
                 <div className="container">
                     <Logo />
-                    <div className="nav">
+                    <div className="nav -wrapper">
                         <Menu language="pt" />
                         <Language pt="/filmes" en="/" active="pt" />
                     </div>

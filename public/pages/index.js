@@ -70,7 +70,7 @@ class Films extends React.Component {
             <header className="header">
                 <div className="container">
                     <Logo />
-                    <div className="nav">
+                    <div className="nav -wrapper">
                         <Menu language="en" />
                         <Language pt="/filmes" en="/" active="en" />
                     </div>

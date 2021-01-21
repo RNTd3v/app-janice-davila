@@ -38,14 +38,14 @@ class AdminVideo extends React.Component {
     handleInput (e) {
         const name = e.target.name;
         const value = e.target.value;
-        this.setState({[name]: value}, 
+        this.setState({[name]: value},
             () => { this.validateField(name, value) });
     }
 
     componentDidMount() {
         categories.getFilmById(Router.query.idFilm).then(res =>  {
             this.setState({
-                film: res, 
+                film: res,
                 category: res.category.name,
                 category_id: res.category_id,
                 titleFilm: res.title,
@@ -59,7 +59,7 @@ class AdminVideo extends React.Component {
         let titleValid = this.state.titleValid;
         let titlePtValid = this.state.titlePtValid;
         let vimeoValid = this.state.vimeoValid;
-      
+
         switch(fieldName) {
           case 'title':
             titleValid = value.length >= 3;
@@ -77,7 +77,7 @@ class AdminVideo extends React.Component {
             break;
         }
         this.setState({
-            formErrors: 
+            formErrors:
                 fieldValidationErrors,
                 titleValid,
                 titlePtValid,
@@ -91,16 +91,16 @@ class AdminVideo extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const { 
-            title, 
-            title_pt, 
+        const {
+            title,
+            title_pt,
             vimeo_id,
             filmId
         } = this.state;
 
         const data = {
-            title, 
-            title_pt, 
+            title,
+            title_pt,
             vimeo_id,
             film_id: filmId
         }
@@ -137,21 +137,21 @@ class AdminVideo extends React.Component {
                     <Logo />
                 </header>
                 <main className="main">
-                    <h2 className="title">{category} > <strong>{titleFilm}</strong></h2>
+                    <h2 className="title">{category} <strong>{titleFilm}</strong></h2>
                     <form className="form -grid -video" onSubmit={this.handleSubmit}>
                         <div className="col -four">
                             <small>English</small>
-                            <input type="text" id="title" name="title" className="input" 
+                            <input type="text" id="title" name="title" className="input"
                                 value={this.state.title} placeholder="Title*" onChange={(event) => this.handleInput(event)} />
                         </div>
                         <div className="col -four">
                             <small>Portuguese</small>
-                            <input type="text" id="titulo" name="title_pt" className="input" 
+                            <input type="text" id="titulo" name="title_pt" className="input"
                                 value={this.state.title_pt} placeholder="Título*" onChange={(event) => this.handleInput(event)} />
                         </div>
                         <div className="col -four">
                             <small>Vimeo Code</small>
-                            <input type="number" id="vimeo" name="vimeo_id" className="input" 
+                            <input type="number" id="vimeo" name="vimeo_id" className="input"
                                 value={this.state.vimeo_id} placeholder="VimeoID*" onChange={(event) => this.handleInput(event)} />
                         </div>
                         <div className="col -four">
@@ -162,10 +162,10 @@ class AdminVideo extends React.Component {
                     <div className="videos">
                         <h3>Videos</h3>
                         <section className="list">
-                            { 
-                                videos.length === 0 
-                                ? 'No video registered' 
-                                : 
+                            {
+                                videos.length === 0
+                                ? 'No video registered'
+                                :
                                 videos.map((video, index) => (
                                     <article className="player" key={video.id}>
                                         <Vimeo
@@ -179,7 +179,7 @@ class AdminVideo extends React.Component {
                                     </article>
                                 ))
                             }
-                            
+
                         </section>
                         <button className="button -center" onClick={() => this.done()}>Finalizar</button>
                     </div>

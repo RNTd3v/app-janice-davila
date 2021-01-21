@@ -26,7 +26,7 @@ const Detalhe = ({ film }) => (
             <header>
                 <div className="container">
                     <Logo />
-                    <div className="nav">
+                    <div className="nav -wrapper">
                         <Menu language="pt" />
                         <Language pt={`/detalhe/${film.id}`} en={`/detail/${film.id}`} active="pt" />
                     </div>

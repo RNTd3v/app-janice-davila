@@ -23,7 +23,7 @@ const BioPt = ({ bio }) => (
             <header className="header">
                 <div className="container">
                     <Logo />
-                    <div className="nav">
+                    <div className="nav -wrapper">
                         <Menu language="pt" />
                         <Language pt="/bio-pt" en="/bio" active="pt" />
                     </div>

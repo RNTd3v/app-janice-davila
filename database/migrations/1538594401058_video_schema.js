@@ -4,7 +4,7 @@ const Schema = use('Schema')
 
 class VideoSchema extends Schema {
   up () {
-    this.create('videos', (table) => {
+    this.createIfNotExists('videos', (table) => {
       table.increments()
       table.timestamps()
       table.string('url').notNullable()

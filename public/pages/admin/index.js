@@ -9,7 +9,7 @@ import Footer from '../../src/components/footer';
 class Admin extends Component {
    render() {
      const user = this.props.auth.getProfile()
-     return (   
+     return (
       <section className="admin">
         <header className="header">
           <Logo />
@@ -27,6 +27,10 @@ class Admin extends Component {
               <i className="fas fa-user-circle icon"></i>
               <h2 className="title">Bio</h2>
             </div>
+            <div className="item" onClick={() => Router.push(`/admin/reels`)}>
+              <i class="fas fa-tv icon"></i>
+              <h2 className="title">Reel</h2>
+            </div>
             <div className="item" onClick={() => Router.push(`/admin/contact`)}>
               <i className="fas fa-envelope icon"></i>
               <h2 className="title">Contact</h2>
@@ -39,4 +43,4 @@ class Admin extends Component {
    }
 }
 
-export default withAuth(Admin) 
+export default withAuth(Admin)

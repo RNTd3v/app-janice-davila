@@ -4,7 +4,7 @@ const Schema = use('Schema')
 
 class BioSchema extends Schema {
   up () {
-    this.create('bios', (table) => {
+    this.createIfNotExists('bios', (table) => {
       table.increments()
       table.timestamps()
       table.string('title').notNullable()

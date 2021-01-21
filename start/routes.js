@@ -54,6 +54,11 @@ Route.group(() => {
 
   // Upload route
   Route.post('upload', 'UploadController.index');
+
+  // Reel routes
+  Route.resource('reels', 'ReelController').apiOnly().middleware(['auth']);
+  Route.get('/reel', 'ReelController.index');
+  Route.get('/reel/:id', 'ReelController.show');
 })
 .prefix('api/v1');
 
@@ -93,6 +98,18 @@ Route.get('/admin/:id/:category/film/:idFilm', ({ request, response, params }) =
 Route.get('/admin/:idFilm/videos', ({ request, response, params }) =>
 	Next.render(request.request, response.response, '/admin/video', {
         idFilm: params.idFilm
+	})
+);
+
+Route.get('/admin/reels/reel', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/admin/reel', {
+    ...params
+  })
+);
+
+Route.get('/admin/reels/reel/:idReel', ({ request, response, params }) =>
+	Next.render(request.request, response.response, '/admin/reel', {
+    idReel: params.idReel
 	})
 );
 

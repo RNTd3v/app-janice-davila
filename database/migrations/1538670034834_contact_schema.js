@@ -4,7 +4,7 @@ const Schema = use('Schema')
 
 class ContactSchema extends Schema {
   up () {
-    this.create('contacts', (table) => {
+    this.createIfNotExists('contacts', (table) => {
       table.increments()
       table.timestamps()
       table.string('name').notNullable()

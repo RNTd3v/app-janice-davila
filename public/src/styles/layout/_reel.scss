@@ -1,0 +1,65 @@
+.reel-detail {
+  display: flex;
+  padding-top: 10rem;
+
+  @media #{$mq-desktop} {
+      padding-top: 8rem;
+      flex-direction: column;
+  }
+
+  @media #{$mq-mobile} {
+    padding-top: 5rem;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    color: #3d8f8f;
+  }
+
+  > .reel {
+      flex: 1;
+      @media #{$mq-tablet} {
+          padding-right: 0;
+      }
+      > .player {
+        .category {
+          width: 100%;
+          text-align: center;
+          margin: 2rem 0;
+          padding: 2rem 0 0;
+          text-transform: uppercase;
+          border-top: 1px solid rgba(61, 143, 143, .4);
+        }
+          iframe {
+              width: 100%;
+              @media #{$mq-desktop} {
+                  height: 400px;
+                  margin-bottom: 50px;
+              }
+              @media #{$mq-tablet} {
+                  height: 300px;
+              }
+              @media #{$mq-mobile-h} {
+                  height: 200px;
+                  margin-bottom: 20px;
+              }
+          }
+      }
+  }
+
+  > .content {
+      width: 350px;
+
+      @media #{$mq-desktop} {
+          width: 100%;
+          text-align: center;
+      }
+
+      > .title {
+          margin: 1rem 0 2rem;
+          font-size: 2rem;
+          color:$green;
+      }
+  }
+}

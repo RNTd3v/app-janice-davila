@@ -36,6 +36,19 @@ const Menu = ({language = 'en'}) => (
                     {
                         language === 'pt'
                         ?
+                            <ActiveLink href="/pt/reel" activeClassName="active">
+                                <a>Reel</a>
+                            </ActiveLink>
+                        :
+                            <ActiveLink href="/reel" activeClassName="active">
+                                <a>Reel</a>
+                            </ActiveLink>
+                    }
+                </li>
+                <li>
+                    {
+                        language === 'pt'
+                        ?
                             <ActiveLink href="/contato" activeClassName="active">
                                 <a>Contato</a>
                             </ActiveLink>

@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &.-wrapper {
+      @media #{$mq-mobile} {
+        flex-direction: column;
+      }
+    }
 
     .menu {
         ul {
@@ -23,7 +28,7 @@
                         position: absolute;
                         bottom: -10px;
                         left: 50%;
-                        margin-left: -10px; 
+                        margin-left: -10px;
                         transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
                     }
                     &:hover {

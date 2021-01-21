@@ -34,7 +34,7 @@ class Contact extends React.Component {
         const response = await axios.get(
             `${process.env.API_URL}/about`
         );
-        
+
         return { about: response.data[0] }
     }
 
@@ -60,7 +60,7 @@ class Contact extends React.Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        
+
         this.setState({
           [name]: value
         });
@@ -85,7 +85,7 @@ class Contact extends React.Component {
                     <header className="header">
                         <div className="container">
                             <Logo />
-                            <div className="nav">
+                            <div className="nav -wrapper">
                                 <Menu language="en" />
                                 <Language pt="/contato" en="/contact" active="en" />
                             </div>
@@ -115,7 +115,7 @@ class Contact extends React.Component {
                             <form className="form" onSubmit={this.handleSubmit} onReset={this.handleFormReset}>
                                 <input type="text" id="name" name="name" className="input" placeholder="Name" value={this.state.name} onChange={this.handleChange} />
                                 <input type="email" id="email" name="email" className="input" placeholder="Email" value={this.state.email} onChange={this.handleChange} />
-                                <MaskedInput mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} 
+                                <MaskedInput mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
                                 id="phone" name="phone" className="input" placeholder="Phone" value={this.state.phone} onChange={this.handleChange} />
                                 <textarea placeholder="Message" id="message" name="message" className="textarea" value={this.state.message} onChange={this.handleChange}></textarea>
                                 <button className="button">Send</button>
