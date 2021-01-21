@@ -2,7 +2,6 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { isMobile, isBrowser } from "react-device-detect";
 import axios from 'axios';
-import "../src/styles/main.scss";
 
 import Head from 'next/head';
 

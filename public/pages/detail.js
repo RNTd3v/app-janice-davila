@@ -2,8 +2,6 @@ import React from 'react';
 import Vimeo from '@u-wave/react-vimeo';
 import axios from 'axios';
 
-import "../src/styles/main.scss";
-
 import Head from 'next/head';
 import withAnalytics from '../src/hocs/withAnalytics';
 
@@ -12,8 +10,6 @@ import Logo from '../src/components/logo';
 import Menu from '../src/components/menu';
 import Language from '../src/components/language';
 import Footer from '../src/components/footer';
-
-
 
 const Detail = ({ film }) => (
     <div>

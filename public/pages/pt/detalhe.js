@@ -2,8 +2,6 @@ import React from 'react';
 import Vimeo from '@u-wave/react-vimeo';
 import axios from 'axios';
 
-import "../../src/styles/main.scss";
-
 import Head from 'next/head';
 import withAnalytics from '../../src/hocs/withAnalytics';
 

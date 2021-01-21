@@ -3,8 +3,6 @@ import axios from 'axios';
 
 import Head from 'next/head';
 
-import "../src/styles/main.scss";
-
 import withAnalytics from '../src/hocs/withAnalytics';
 
 import SanitizedHTML from 'react-sanitized-html';

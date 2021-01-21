@@ -1,5 +1,4 @@
 import React from 'react'
-import Vimeo from '@u-wave/react-vimeo';
 import Player from '@vimeo/player';
 
 import { isMobile } from "react-device-detect";
@@ -51,17 +50,8 @@ class ModalVimeo extends React.Component {
         </section>
         <section className="video">
           <article className="player" id="player">
-            {/* <Vimeo
-              video={film.vimeo_id}
-              width={860}
-              showByline={false}
-              showTitle={false}
-              showPortrait={false}
-              autoplay={true}
-            /> */}
             {this.state.isLoading ? <Loading /> : null }
             <div id="playerModalVimeo"></div>
-            {/* <iframe src={`https://player.vimeo.com/video/${film.vimeo_id}?title=0&byline=0&playsinline=0&portrait=0&badge=0&autoplay=1`} width="640" height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> */}
           </article>
         </section>
       </main>

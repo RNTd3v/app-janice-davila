@@ -4,8 +4,6 @@ import Vimeo from '@u-wave/react-vimeo';
 
 import Head from 'next/head';
 
-import "../src/styles/main.scss";
-
 import withAnalytics from '../src/hocs/withAnalytics';
 
 import Logo from '../src/components/logo';

@@ -1,9 +1,5 @@
 import React from 'react';
-import { css } from 'react-emotion';
-import { BarLoader } from 'react-spinners';
 import axios from 'axios';
-
-import "../src/styles/main.scss";
 
 import Head from 'next/head';
 import withAnalytics from '../src/hocs/withAnalytics';

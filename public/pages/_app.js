@@ -2,6 +2,8 @@ import React from 'react'
 import App, { Container } from 'next/app';
 import { ToastContainer } from 'react-toastify';
 
+import "../src/styles/main.scss";
+
 export default class JaniceApp extends App {
   render() {
     const { Component, pageProps } = this.props

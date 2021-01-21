@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import "../../src/styles/main.scss";
-
 import Head from 'next/head';
 import withAnalytics from '../../src/hocs/withAnalytics';
 import MaskedInput from 'react-text-mask'

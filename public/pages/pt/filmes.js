@@ -1,7 +1,6 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import axios from 'axios';
-import "../../src/styles/main.scss";
 
 import Head from 'next/head';
 import Router from 'next/router'
