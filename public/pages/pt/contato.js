@@ -1,17 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 
-import "../src/styles/main.scss";
+import "../../src/styles/main.scss";
 
 import Head from 'next/head';
-import withAnalytics from '../src/hocs/withAnalytics';
+import withAnalytics from '../../src/hocs/withAnalytics';
 import MaskedInput from 'react-text-mask'
 
 // Components
-import Logo from '../src/components/logo';
-import Menu from '../src/components/menu';
-import Language from '../src/components/language';
-import Footer from '../src/components/footer';
+import Logo from '../../src/components/logo';
+import Menu from '../../src/components/menu';
+import Language from '../../src/components/language';
+import Footer from '../../src/components/footer';
 
 class Contato extends React.Component {
     constructor() {
@@ -32,7 +32,7 @@ class Contato extends React.Component {
         const response = await axios.get(
             `${process.env.API_URL}/about`
         );
-        
+
         return { about: response.data[0] }
     }
 
@@ -58,7 +58,7 @@ class Contato extends React.Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        
+
         this.setState({
           [name]: value
         });
@@ -85,7 +85,7 @@ class Contato extends React.Component {
                             <Logo />
                             <div className="nav">
                                 <Menu language="pt" />
-                                <Language pt="/contato" en="/contact" active="pt" />
+                                <Language pt="/pt/contato" en="/contact" active="pt" />
                             </div>
                         </div>
                     </header>
@@ -113,7 +113,7 @@ class Contato extends React.Component {
                             <form className="form" onSubmit={this.handleSubmit} onReset={this.handleFormReset}>
                                 <input type="text" id="name" name="name" className="input" placeholder="Nome" value={this.state.name} onChange={this.handleChange} />
                                 <input type="email" id="email" name="email" className="input" placeholder="Email" value={this.state.email} onChange={this.handleChange} />
-                                <MaskedInput mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, /\d/]} 
+                                <MaskedInput mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, /\d/]}
                                 id="phone" name="phone" className="input" placeholder="Telefone" value={this.state.phone} onChange={this.handleChange} />
                                 <textarea placeholder="Mensagem" id="message" name="message" className="textarea" value={this.state.message} onChange={this.handleChange}></textarea>
                                 <button className="button">Enviar</button>

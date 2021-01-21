@@ -23,7 +23,7 @@ const Menu = ({language = 'en'}) => (
                     {
                         language === 'pt'
                         ?
-                            <ActiveLink href="/bio-pt" activeClassName="active">
+                            <ActiveLink href="/pt/bio" activeClassName="active">
                                 <a>Bio</a>
                             </ActiveLink>
                         :
@@ -49,7 +49,7 @@ const Menu = ({language = 'en'}) => (
                     {
                         language === 'pt'
                         ?
-                            <ActiveLink href="/contato" activeClassName="active">
+                            <ActiveLink href="/pt/contato" activeClassName="active">
                                 <a>Contato</a>
                             </ActiveLink>
                         :

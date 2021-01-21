@@ -25,7 +25,7 @@ const Bio = ({ bio }) => (
                     <Logo />
                     <div className="nav -wrapper">
                         <Menu language="en" />
-                        <Language pt="/bio-pt" en="/bio" active="en" />
+                        <Language pt="/pt/bio" en="/bio" active="en" />
                     </div>
                 </div>
             </header>

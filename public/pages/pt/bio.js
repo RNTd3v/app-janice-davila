@@ -3,16 +3,16 @@ import axios from 'axios';
 
 import Head from 'next/head';
 
-import "../src/styles/main.scss";
+import "../../src/styles/main.scss";
 
-import withAnalytics from '../src/hocs/withAnalytics';
+import withAnalytics from '../../src/hocs/withAnalytics';
 
 import SanitizedHTML from 'react-sanitized-html';
 
-import Logo from '../src/components/logo';
-import Menu from '../src/components/menu';
-import Language from '../src/components/language';
-import Footer from '../src/components/footer';
+import Logo from '../../src/components/logo';
+import Menu from '../../src/components/menu';
+import Language from '../../src/components/language';
+import Footer from '../../src/components/footer';
 
 const BioPt = ({ bio }) => (
     <div>
@@ -25,7 +25,7 @@ const BioPt = ({ bio }) => (
                     <Logo />
                     <div className="nav -wrapper">
                         <Menu language="pt" />
-                        <Language pt="/bio-pt" en="/bio" active="pt" />
+                        <Language pt="/pt/bio" en="/bio" active="pt" />
                     </div>
                 </div>
             </header>

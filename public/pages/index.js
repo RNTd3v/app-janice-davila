@@ -72,7 +72,7 @@ class Films extends React.Component {
                     <Logo />
                     <div className="nav -wrapper">
                         <Menu language="en" />
-                        <Language pt="/filmes" en="/" active="en" />
+                        <Language pt="/pt/filmes" en="/" active="en" />
                     </div>
                 </div>
                 <div className="show-mobile">

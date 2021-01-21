@@ -10,7 +10,7 @@ const Language = ({pt, en, active}) => (
                 </Link>
             </li>
             <li className="item">
-                <Link href={`pt${pt}`}>
+                <Link href={`${pt}`}>
                     <a className={'link ' + (active === 'pt' ? '-active' : '')}>PT</a>
                 </Link>
             </li>

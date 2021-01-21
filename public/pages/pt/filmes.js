@@ -25,7 +25,7 @@ const Filmes = ({ categories }) => (
                     <Logo />
                     <div className="nav -wrapper">
                         <Menu language="pt" />
-                        <Language pt="/filmes" en="/" active="pt" />
+                        <Language pt="/pt/filmes" en="/" active="pt" />
                     </div>
                 </div>
                 <div className="show-mobile">

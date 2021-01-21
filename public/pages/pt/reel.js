@@ -4,14 +4,14 @@ import Vimeo from '@u-wave/react-vimeo';
 
 import Head from 'next/head';
 
-import "../src/styles/main.scss";
+import "../../src/styles/main.scss";
 
-import withAnalytics from '../src/hocs/withAnalytics';
+import withAnalytics from '../../src/hocs/withAnalytics';
 
-import Logo from '../src/components/logo';
-import Menu from '../src/components/menu';
-import Language from '../src/components/language';
-import Footer from '../src/components/footer';
+import Logo from '../../src/components/logo';
+import Menu from '../../src/components/menu';
+import Language from '../../src/components/language';
+import Footer from '../../src/components/footer';
 
 const Reel = ({ reels }) => (
     <div>
@@ -23,8 +23,8 @@ const Reel = ({ reels }) => (
                 <div className="container">
                     <Logo />
                     <div className="nav -wrapper">
-                        <Menu language="en" />
-                        <Language pt="/pt/reel" en="/reel" active="en" />
+                        <Menu language="pt" />
+                        <Language pt="/pt/reel" en="/reel" active="pt" />
                     </div>
                 </div>
             </header>
@@ -35,7 +35,7 @@ const Reel = ({ reels }) => (
                     .sort((a, b) => a.order_by - b.order_by)
                     .map((reel) => (
                         <article className="player" key={reel.id}>
-                            <h3 className="category">{reel.category}</h3>
+                            <h3 className="category">{reel.category_pt}</h3>
                             <Vimeo
                                 video={reel.vimeo_id}
                                 width={860}

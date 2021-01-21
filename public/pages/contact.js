@@ -87,7 +87,7 @@ class Contact extends React.Component {
                             <Logo />
                             <div className="nav -wrapper">
                                 <Menu language="en" />
-                                <Language pt="/contato" en="/contact" active="en" />
+                                <Language pt="/pt/contato" en="/contact" active="en" />
                             </div>
                         </div>
                     </header>

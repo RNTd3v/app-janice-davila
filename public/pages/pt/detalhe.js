@@ -2,16 +2,16 @@ import React from 'react';
 import Vimeo from '@u-wave/react-vimeo';
 import axios from 'axios';
 
-import "../src/styles/main.scss";
+import "../../src/styles/main.scss";
 
 import Head from 'next/head';
-import withAnalytics from '../src/hocs/withAnalytics';
+import withAnalytics from '../../src/hocs/withAnalytics';
 
 // Components
-import Logo from '../src/components/logo';
-import Menu from '../src/components/menu';
-import Language from '../src/components/language';
-import Footer from '../src/components/footer';
+import Logo from '../../src/components/logo';
+import Menu from '../../src/components/menu';
+import Language from '../../src/components/language';
+import Footer from '../../src/components/footer';
 
 const Detalhe = ({ film }) => (
     <div>
@@ -28,7 +28,7 @@ const Detalhe = ({ film }) => (
                     <Logo />
                     <div className="nav -wrapper">
                         <Menu language="pt" />
-                        <Language pt={`/detalhe/${film.id}`} en={`/detail/${film.id}`} active="pt" />
+                        <Language pt={`/pt/detalhe/${film.id}`} en={`/detail/${film.id}`} active="pt" />
                     </div>
                 </div>
             </header>

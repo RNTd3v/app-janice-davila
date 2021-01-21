@@ -30,7 +30,7 @@ const Detail = ({ film }) => (
                     <Logo />
                     <div className="nav -wrapper">
                         <Menu language="en" />
-                        <Language pt={`/detalhe/${film.id}`} en={`/detail/${film.id}`} active="en" />
+                        <Language pt={`/pt/detalhe/${film.id}`} en={`/detail/${film.id}`} active="en" />
                     </div>
                 </div>
             </header>
