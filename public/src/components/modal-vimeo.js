@@ -18,6 +18,7 @@ class ModalVimeo extends React.Component {
 
     const options = {
       id: film.vimeo_id,
+      width: 750,
       title: false,
       byline: false,
       playsinline: false,
