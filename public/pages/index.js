@@ -90,7 +90,7 @@ class Films extends React.Component {
                                 .sort((a, b) => a.order_by - b.order_by)
                                 .map((film, index) => (
                                   <article className={'item ' + (isMobile ? '-mobile' : '')} key={film.id} onClick={() => this.selectVideo(film)}>
-                                      <img src={`https://www.janicedavila.com/${film.picture}`} className="picture" alt={film.title} loading={this.handleLazyLoadingImage(index)} />
+                                      <img src={film.picture} className="picture" alt={film.title} loading={this.handleLazyLoadingImage(index)} />
                                       <span className="content">
                                         <h3 className="title">{film.title}</h3>
                                         <p className="description">{film.description}</p>
