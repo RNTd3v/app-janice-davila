@@ -21,7 +21,7 @@ class ModalVimeo extends React.Component {
       width: 750,
       title: false,
       byline: false,
-      playsinline: false,
+      playsinline: true,
       portrait: false,
       badge: false
     }
