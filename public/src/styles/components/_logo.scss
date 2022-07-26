@@ -1,19 +1,19 @@
 .logo {
-    a {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        @media #{$mq-tablet} {
-            margin-bottom: 20px;
-        }
-        span {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-        small {
-            font-size: .8rem;
-            letter-spacing: .11rem;
-        }
+  a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    @media #{$mq-tablet} {
+      margin-bottom: 20px;
     }
+    span {
+      font-size: 1.5rem;
+    }
+    small {
+      font-size: 0.8rem;
+      letter-spacing: 0.11rem;
+      text-align: center;
+    }
+  }
 }

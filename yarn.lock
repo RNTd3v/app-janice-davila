@@ -2,9 +2,10 @@
 # yarn lockfile v1
 
 
-"@adonisjs/ace@^5.0.8":
+"@adonisjs/ace@5.0.8":
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/@adonisjs/ace/-/ace-5.0.8.tgz#98ff6e55687ce4d7b9bd83d61e77dd4dd43420ea"
+  integrity sha512-M4MGrzWzuE++jlPrbDPgo1tdv5j7uH4FsaoGddH+qJ+iXErVZuV6z2gYdmlorDDbvotFpxA+TTtDEXrTLCE08w==
   dependencies:
     cli-table "^0.3.1"
     commander "^2.18.0"
@@ -22,9 +23,10 @@
     prompt-list "^3.2.0"
     prompt-password "^1.2.0"
 
-"@adonisjs/auth@^3.0.7":
+"@adonisjs/auth@3.0.7":
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/@adonisjs/auth/-/auth-3.0.7.tgz#e18ed04b003acbb24ad0f4a86ab82cecc6fca5b1"
+  integrity sha512-ui7cSTNmxO+8r3iaA9ZQOtgzXwHshg/XFHH1OR7tUELHUUyInoPaRqLofb+5KpjYZ1U9RrZC6eT+sTUQzzxk+Q==
   dependencies:
     "@adonisjs/generic-exceptions" "^2.0.1"
     basic-auth "^2.0.1"
@@ -35,9 +37,10 @@
     resetable "^1.0.3"
     uuid "^3.3.2"
 
-"@adonisjs/bodyparser@^2.0.5":
+"@adonisjs/bodyparser@2.0.5":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@adonisjs/bodyparser/-/bodyparser-2.0.5.tgz#17efee74f3dbb4191287b86eb11347961e37359e"
+  integrity sha512-4oF8jQZXocMuISvtpIN90OmYhhrzGnq+Pq41XA6DyESYjlWs/52STbkh2Qi7BrW2wGsbueyxNkDjqSmcT3ZWuA==
   dependencies:
     "@adonisjs/generic-exceptions" "^2.0.1"
     bytes "^3.0.0"
@@ -50,19 +53,22 @@
     media-typer "^0.3.0"
     multiparty "^4.1.4"
 
-"@adonisjs/cors@^1.0.7":
+"@adonisjs/cors@1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@adonisjs/cors/-/cors-1.0.7.tgz#9b7565ad0b80215c620e8864b4af8651220a527c"
+  integrity sha512-jBO+bI/zdydAXURL02gQxXB57L5+eV2MUYp7zmDrVa12M6mQPMRz5TC2F7a0Kknx9JUr5dsl4+eN0XNfe/8sWQ==
 
-"@adonisjs/drive@^1.0.4":
+"@adonisjs/drive@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@adonisjs/drive/-/drive-1.0.4.tgz#0dd2a3a5be7bf60fe80bc03d066c48eca9251ade"
+  integrity sha512-p2Ot+ylOwtGV6gHIKIMJG0M+AxBatjnqv+UOrUW3Y8xsyN9bKg9khZTEqn7WrHUAlmeS4WUR5T68KIaxuXgRDw==
   dependencies:
     "@slynova/flydrive" "^0.3.1"
 
-"@adonisjs/fold@^4.0.9":
+"@adonisjs/fold@4.0.9":
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/@adonisjs/fold/-/fold-4.0.9.tgz#1a9860af2dbe29e4111d7f0cc234be15c2e28be8"
+  integrity sha512-eH6048Ug32BvYvvvfRThy+IDE8lcRtqExca2TfE/Gw5ZP51rVEYqPd1yy3ioB4R5XI8VUS0hjOt5l7tKUh4Sww==
   dependencies:
     "@adonisjs/generic-exceptions" "^2.0.1"
     caller "^1.0.1"
@@ -70,9 +76,10 @@
     lodash "^4.17.10"
     require-stack "^1.0.2"
 
-"@adonisjs/framework@^5.0.9":
+"@adonisjs/framework@5.0.9":
   version "5.0.9"
   resolved "https://registry.yarnpkg.com/@adonisjs/framework/-/framework-5.0.9.tgz#b5ccaab3fb75d19dcadd62cc93aa330694109593"
+  integrity sha512-5v9tFr1HzXOpE2BVUNIBFlHWxfXmmD5eA+qWQiVYAD413ro0IG82R5eQ2E33IDoU0yhjf40zjZpMV5kAEEQgGw==
   dependencies:
     "@adonisjs/generic-exceptions" "^2.0.1"
     "@adonisjs/middleware-base" "^1.0.0"
@@ -106,18 +113,20 @@
     node-exceptions "^3.0.0"
     upcast "^2.1.1"
 
-"@adonisjs/ignitor@^2.0.8":
+"@adonisjs/ignitor@2.0.8":
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/@adonisjs/ignitor/-/ignitor-2.0.8.tgz#d4db4f09d8f0ee0e7f9b5030de14135a25a8bf91"
+  integrity sha512-drpuwxIjvBpBBn4Ndt2Sghf0aN3ml1zz3Bxu3g42k29ZEMDKgw9KkmabsEd+MVUqPLzch4cJRFKIReh9TWnY+Q==
   dependencies:
     debug "^4.0.1"
     pify "^4.0.0"
     youch "^2.0.10"
     youch-terminal "^1.0.0"
 
-"@adonisjs/lucid@^6.1.3":
+"@adonisjs/lucid@6.1.3":
   version "6.1.3"
   resolved "https://registry.yarnpkg.com/@adonisjs/lucid/-/lucid-6.1.3.tgz#c759ada7b3af2c3530839c63f254a38c0f1defcd"
+  integrity sha512-x/Ke8WkkgRmseRPETBOObptnElXMclQXtjJftfDMiVlz9VhJuIaFCLJwcGZ8g6UNRohMUkcfDrElaXOPc6W1fA==
   dependencies:
     "@adonisjs/generic-exceptions" "^2.0.1"
     chance "^1.0.16"
@@ -129,9 +138,10 @@
     pretty-hrtime "^1.0.3"
     require-all "^3.0.0"
 
-"@adonisjs/mail@^3.0.9":
+"@adonisjs/mail@3.0.9":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@adonisjs/mail/-/mail-3.0.9.tgz#dd69042fbbf4d53821b12a5371dba2abe24df1da"
+  integrity sha512-Q7+Hr5jvWY8RVmQW6TtZ3tmC0QFw+qUKKMQujqbz1jM78olLGBbkpoDXxINq617vMLY9vjwYFuhEu0cl9SyvCg==
   dependencies:
     "@adonisjs/generic-exceptions" "^2.0.1"
     clone "^2.1.2"
@@ -783,6 +793,14 @@
     node-exceptions "^3.0.0"
     resetable "^1.0.2"
 
+"@vimeo/player@^2.15.0":
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.17.1.tgz#613f722aaafc18bb7dad73c58f1b9ad3e3996b2a"
+  integrity sha512-M8uMYiOwFkqD070/pO/CuRmwKvnHBmEZKckt5C2tAaMhlldzui+lUC5zMFzO0RDPmIXwg1WdDxaJnzuic6ll/A==
+  dependencies:
+    native-promise-only "0.8.1"
+    weakmap-polyfill "2.0.4"
+
 "@webassemblyjs/ast@1.7.8":
   version "1.7.8"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.8.tgz#f31f480debeef957f01b623f27eabc695fa4fe8f"
@@ -927,9 +945,10 @@
     mini-css-extract-plugin "0.4.3"
     postcss-loader "3.0.0"
 
-"@zeit/next-sass@^1.0.1":
+"@zeit/next-sass@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@zeit/next-sass/-/next-sass-1.0.1.tgz#18f7f36caa1975d7e090e81bde116a53f3202d8d"
+  integrity sha512-QVmrsLye85gtIYj+QSBuFadzd6NQgI5DZfqlV+ET1nXI3B+C91wAaJN71O98KMvNIc8R2QLosxugEyd2V5wE6w==
   dependencies:
     "@zeit/next-css" "1.0.1"
     sass-loader "6.0.6"
@@ -971,9 +990,10 @@ acorn@^6.0.1:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.0.2.tgz#6a459041c320ab17592c6317abbfdf4bbaa98ca4"
 
-adonis-nextjs@^3.1.0:
+adonis-nextjs@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/adonis-nextjs/-/adonis-nextjs-3.1.0.tgz#b74f62029d1657b0df42e2744fd9e45a9a2cf975"
+  integrity sha512-lWS7ITPzd84WNRBMHkldmLv4TbKQ4oq1BRK9XTNOpdJ08Q4EgSgT85qsRsN5Z/ZFFKAIVEnNST70K7WCIA4aug==
 
 ajv-errors@^1.0.0:
   version "1.0.0"
@@ -3937,9 +3957,10 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
-mysql2@^1.6.1:
+mysql2@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-1.6.1.tgz#9027fd93a05c5d86e79bfada35c9b677b3a0d7c5"
+  integrity sha512-BNrJH5HavPqskXEy8oVz7ucRbkhegKQ7VD8rNGFwvTuk0WiUSi1wXFOg67NjCGquZnim8nKgHdDiih6LqG5knA==
   dependencies:
     cardinal "2.1.1"
     denque "1.3.0"
@@ -3952,9 +3973,10 @@ mysql2@^1.6.1:
     seq-queue "0.0.5"
     sqlstring "2.3.1"
 
-mysql@^2.16.0:
+mysql@2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/mysql/-/mysql-2.16.0.tgz#b23b22ab5de44fc2d5d32bd4f5af6653fc45e2ba"
+  integrity sha512-dPbN2LHonQp7D5ja5DJXNbCLe/HRdu+f3v61aguzNRQIrmZLOeRoymBYyeThrR6ug+FqzDL95Gc9maqZUJS+Gw==
   dependencies:
     bignumber.js "4.1.0"
     readable-stream "2.3.6"
@@ -3991,6 +4013,11 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+native-promise-only@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
+  integrity sha512-zkVhZUA3y8mbz652WrL5x0fB0ehrBkulWT3TomAQ9iDtyXZvzKeEA6GPxAItBYeNYl5yngKRX612qHOhvMkDeg==
+
 needle@^2.2.1:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.4.tgz#51931bff82533b1928b7d1d69e01f1b00ffd2a4e"
@@ -4007,9 +4034,10 @@ neo-async@^2.5.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.2.tgz#489105ce7bc54e709d736b195f82135048c50fcc"
 
-next@^7.0.1:
+next@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/next/-/next-7.0.1.tgz#58630126325dbeccf1926f32a8d9bd06ee43546c"
+  integrity sha512-9f/w2Zks8sdfh2XelA0+2l4+ilzAnGnEKkLBmCAxwM9h7oI0YQzHV4ZhOYMCQp7qQ5u3cnjvyeVfqx++ccry+g==
   dependencies:
     "@babel/core" "7.0.0"
     "@babel/plugin-proposal-class-properties" "7.0.0"
@@ -4941,9 +4969,17 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.5.2:
+react-device-detect@^1.15.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.17.0.tgz#a00b4fd6880cebfab3fd8a42a79dc0290cdddca9"
+  integrity sha512-bBblIStwpHmoS281JFIVqeimcN3LhpoP5YKDWzxQdBIUP8S2xPvHDgizLDhUq2ScguLfVPmwfF5y268EEQR60w==
+  dependencies:
+    ua-parser-js "^0.7.24"
+
+react-dom@16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.5.2.tgz#b69ee47aa20bab5327b2b9d7c1fe2a30f2cfa9d7"
+  integrity sha512-RC8LDw8feuZOHVgzEf7f+cxBr/DnKdqp56VU0lAs1f4UfKc4cU8wU4fTq/mgnvynLQo8OtlPC19NUFh/zjZPuA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -4954,9 +4990,10 @@ react-error-overlay@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react@^16.5.2:
+react@16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
+  integrity sha512-FDCSVd3DjVTmbEAjUNX6FgfAmQ+ypJfHUsqUJOYNCBUp1h8lqmtC+0mXJ+JjsWx4KAVTkk1vKd1hLQPvEviSuw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5908,6 +5945,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+ua-parser-js@^0.7.24:
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
+  integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
+
 uglify-es@^3.3.4:
   version "3.3.9"
   resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
@@ -6106,6 +6148,11 @@ watchpack@^1.5.0:
     chokidar "^2.0.2"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+
+weakmap-polyfill@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/weakmap-polyfill/-/weakmap-polyfill-2.0.4.tgz#bcc301e4c8eb4eda3e406f08f1a691093e407884"
+  integrity sha512-ZzxBf288iALJseijWelmECm/1x7ZwQn3sMYIkDr2VvZp7r6SEKuT8D0O9Wiq6L9Nl5mazrOMcmiZE/2NCenaxw==
 
 webpack-dev-middleware@3.4.0:
   version "3.4.0"
