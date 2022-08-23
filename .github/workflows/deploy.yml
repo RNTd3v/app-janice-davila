@@ -1,0 +1,25 @@
+
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USER}}
+
+          script: |
+            cd /var/www
+            git clone git@github.com:RNTd3v/app-janice-davila.git
+            echo 'Deployment successfull to digital ocean'
