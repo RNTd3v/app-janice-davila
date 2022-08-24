@@ -24,10 +24,10 @@ jobs:
             cd /var/www/app-janice-davila
             git pull
             echo 'npm install adonis...'
-            yarn ci
+            yarn
             echo 'npm install nextjs...'
             cd public
-            yarn ci
+            yarn
             echo 'building...'
             cd ..
             yarn build
