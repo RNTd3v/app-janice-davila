@@ -24,15 +24,15 @@ jobs:
             cd /var/www/app-janice-davila
             git pull
             echo 'npm install adonis...'
-            npm install
+            yarn ci
             echo 'npm install nextjs...'
             cd public
-            npm install
+            yarn ci
             echo 'building...'
             cd ..
-            npm run build
-            (pm2 delete 'app-janice' || true)
-            pm2 start npm --name 'app-janice' -- start
+            yarn build
+            (pm2 delete all || true)
+            pm2 start npm --name 'app-janice'--cwd '/var/www/app-janice-davila' -- start
             echo 'app started successfully with pm2'
 
 
