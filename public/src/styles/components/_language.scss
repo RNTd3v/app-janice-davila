@@ -24,14 +24,14 @@
                     margin: 0 8px;
                     margin-right: 2px;
                     cursor: default;
-                    font-family: 'Panton-ExtraLight';
+                    font-weight: 400;
                     opacity: .5;
                 }
             }
             > .link {
                 text-decoration: none;
                 color: $grey;
-                font-family: 'Panton-Bold';
+                font-weight: 400;
                 font-size: .8rem;
                 &.-active {
                     color: $green;

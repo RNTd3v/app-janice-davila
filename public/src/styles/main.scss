@@ -2,8 +2,10 @@
 // @import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 // @import "~react-image-crop/lib/ReactCrop.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400&display=swap');
+
+
 @import
-'./general/fonts',
 './general/toastify',
 
 './helpers/mixins',
@@ -37,7 +39,8 @@ html, body {
     color: white;
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Panton-ExtraLight';
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
 }
 
 * {
@@ -48,7 +51,7 @@ html, body {
 }
 
 strong {
-    font-family: 'Panton-Bold';
+    font-weight: 400;
 }
 
 .container {
@@ -74,7 +77,7 @@ strong {
             // background-color: $green;
             color: white;
             text-decoration: none;
-            font-family: 'Panton-Bold';
+            font-weight: 400;
             flex: 1;
             text-align: center;
             &:nth-of-type(2) {

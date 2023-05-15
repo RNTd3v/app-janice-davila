@@ -37,7 +37,7 @@
                         }
                     }
                     &.active {
-                        font-family: 'Panton-Bold';
+                      font-weight: 400;
                         color:$green;
                         &:after {
                             width: 20px;
